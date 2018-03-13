@@ -8,7 +8,7 @@ export function validateEmail(email: string) {
 }
 
 export function validateUsername(username: string) {
-  if (!/^[a-z][a-z_-0-9]{7,15}$/i.test(username))
+  if (!/^[a-z][a-z0-9_\-]{7,15}$/i.test(username))
     throw new ValidationException(
       'invalid username; must start with an alphabetic ' +
       'character and be 8-16 characters long consisting ' +

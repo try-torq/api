@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import uniqueValidator from 'mongoose-unique-validator';
+import * as uniqueValidator from 'mongoose-unique-validator';
 
 import { AbstractModel } from './AbstractModel';
 import { ICarModelDocument } from './CarModel';
@@ -21,15 +21,15 @@ export const CarMakeSchema = new mongoose.Schema({
   }],
 })
 
-CarMakeSchema.plugin(uniqueValidator);
-
-export const CarMakeModel = mongoose.model('CarMake', CarMakeSchema);
-
 export interface ICarMakeDocument extends mongoose.Document {
   _id: string;
   name: string;
   models: ICarModelDocument[];
 }
+
+CarMakeSchema.plugin(uniqueValidator);
+
+export const CarMakeModel = mongoose.model<ICarMakeDocument>('CarMake', CarMakeSchema);
 
 export class CarMake extends AbstractModel<ICarMakeDocument> {
   public get id(): string {

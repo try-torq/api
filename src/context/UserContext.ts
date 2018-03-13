@@ -14,19 +14,19 @@ export class UserContext {
     this.claims = (request as any).user as IUserClaims;
   }
 
-  public get id(): string? {
+  public get id(): string {
     return this.claims.id;
   }
 
-  public get email(): string? {
+  public get email(): string {
     return this.claims.email;
   }
 
-  public get username(): string? {
+  public get username(): string {
     return this.claims.id;
   }
 
-  public get role(): string? {
+  public get role(): string {
     return this.claims.role;
   }
 

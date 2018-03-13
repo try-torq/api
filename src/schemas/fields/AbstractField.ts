@@ -23,9 +23,9 @@ export class AbstractField {
     return undefined;
   }
 
-  // public after<R, A, S>(result: R, context: Context<A>, args: A, source: S): Promise<A> {
-  //   return Promise.resolve(result);
-  // }
+  public after<R, A, S>(result: R, context: Context<A>, args: A, source: S): Promise<R> {
+    return Promise.resolve(result);
+  }
 
   public async resolve<R, A, S>(source: S, args: A, context: Context<A>): Promise<R> {
     if (!context.hasUserRoles(this.allow)) {
@@ -41,7 +41,7 @@ export class AbstractField {
 
     const result = await this.execute<R, A, S>(context, args, source);
     
-    // await this.after(result, context, args, source);
+    await this.after(result, context, args, source);
 
     return result;
   }

@@ -1,4 +1,5 @@
 import * as mongoose from 'mongoose';
+import * as uniqueValidator from 'mongoose-unique-validator';
 
 export interface IJsonConvertableModel {
   toJson(): Object;
@@ -22,7 +23,8 @@ export class AbstractModel<T extends mongoose.Document> {
   }
 
   public async save(options?: mongoose.SaveOptions): Promise<T> {
-    return await this._document.save(options);
+    this._document = await this._document.save(options);
+    return this._document;
   }
 
   public async remove(): Promise<T> {

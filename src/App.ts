@@ -5,8 +5,8 @@ import * as morgan from 'morgan';
 import * as cors from 'cors';
 
 import { Exception } from './exceptions';
-// import { Schema } from './schemas';
-// import { RootValue } from './RootValue';
+import { UserService } from './services';
+import { GraphQLRoutes } from './routes'
 import {
   Database,
   Environment,
@@ -39,6 +39,19 @@ export class App {
         maxAge: 31536000,
         includeSubdomains: true,
       }))
+      .post('/seed', async (req: express.Request, res: express.Response) => {
+        const user = await UserService.create({
+          firstname: 'charles',
+          lastname: 'kenney',
+          username: 'charles01',
+          email: 'charles@charles.com',
+          password: 'fooobar29',
+        });
+
+        res.send(user.toJson());
+      });
+
+    GraphQLRoutes.mount(this.express);
     
     Server.run(this.express, Environment.config.server.port);
     this.log.debug('Server was started on environment %s', Environment.$name)

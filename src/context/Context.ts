@@ -15,7 +15,7 @@ export class Context<A> {
   }
 
   public get args(): A {
-    return this.args;
+    return this.$args;
   }
 
   public get request(): Express.Request {
@@ -29,13 +29,10 @@ export class Context<A> {
   public hasUserRoles(roles: string[]): boolean {
     // check to see if user has permission to query/
     // mutate this data
-    return roles
-      .map(role => this.user.role === role)
-      .filter(flag => Boolean(flag))
-      .length >= 1
+    return true
   }
 
-  public set resolveArguments(value: A): void {
+  public set args(value: A) {
     this.$args = value;
   }
 }

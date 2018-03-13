@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import uniqueValidator from 'mongoose-unique-validator';
+import * as uniqueValidator from 'mongoose-unique-validator';
 
 import { AbstractModel } from './AbstractModel';
 import { ICarMakeDocument } from './CarMake';
@@ -51,6 +51,10 @@ export interface ICarModelDocument extends mongoose.Document {
   carPosts: ICarPostDocument;
   tags: ICarTagDocument;
 }
+
+CarModelSchema.plugin(uniqueValidator);
+
+export const CarModelModel = mongoose.model<ICarModelDocument>('CarModel', CarModelSchema);
 
 export interface INewCarModelBuffer {
   name: string;

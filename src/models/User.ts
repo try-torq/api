@@ -1,14 +1,13 @@
 import * as mongoose from 'mongoose';
 import * as bcrypt from 'bcrypt';
 import * as jwt from 'jwt-simple';
-import uniqueValidator from 'mongoose-unique-validator';
+import * as uniqueValidator from 'mongoose-unique-validator';
 
 import { AbstractModel } from './AbstractModel';
 import { validateEmail, validatePassword, validateUsername } from '../utils';
 import { ICarPostDocument } from './CarPost';
 
 export const UserSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
   firstname: {
     type: String,
     trim: true,
@@ -27,6 +26,7 @@ export const UserSchema = new mongoose.Schema({
     type: String,
     trim: true,
     required: true,
+    unique: true,
     min: 3,
     max: 16,
     validate: validateUsername,
@@ -35,6 +35,7 @@ export const UserSchema = new mongoose.Schema({
     type: String,
     trim: true,
     required: true,
+    unique: true,
     min: 6,
     max: 255,
     validate: validateEmail,
@@ -51,6 +52,10 @@ export const UserSchema = new mongoose.Schema({
   hash: {
     type: String,
     required: true,
+  },
+  carPosts: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'CarPost'
   }
 }, {
   timestamps: {
@@ -73,15 +78,17 @@ export interface IUserDocument extends mongoose.Document {
 
 UserSchema.plugin(uniqueValidator);
 
-export const UserModel = mongoose.model('User', UserSchema);
+export const UserModel = mongoose.model<IUserDocument>('User', UserSchema);
 
-export interface INewUserBuffer {
-  firstname: string;
-  lastname: string;
-  username: string;
-  password: string;
-  email: string;
-  role: string;
+export interface IUserAttributes {
+  id?: string;
+  firstname?: string;
+  lastname?: string;
+  username?: string;
+  email?: string;
+  salt?: string;
+  hash?: string;
+  joinedAt?: Date;
 }
 
 interface ICipherSet {
@@ -90,28 +97,6 @@ interface ICipherSet {
 }
 
 export class User extends AbstractModel<IUserDocument> {
-
-  public static async create(buffer: INewUserBuffer): Promise<User> {
-    const {
-      firstname,
-      lastname,
-      username,
-      password,
-      role,
-    } = buffer;
-
-    const { salt, hash } = await User.generateSaltAndHash(password);
-    const document = new UserModel({
-      firstname,
-      lastname,
-      username,
-      salt,
-      hash,
-      role
-    }) as IUserDocument;
-
-    return new User(document);
-  }
 
   public genToken(): string {
     const { id, email, username, role } = this;
@@ -128,7 +113,7 @@ export class User extends AbstractModel<IUserDocument> {
     }
   }
 
-  private static async generateSaltAndHash(password: string): Promise<ICipherSet> {
+  public static async generateSaltAndHash(password: string): Promise<ICipherSet> {
     const salt = await bcrypt.genSalt(10);
     const hash = await bcrypt.hash(password, salt);
     return <ICipherSet>{ salt, hash };
@@ -209,6 +194,32 @@ export class User extends AbstractModel<IUserDocument> {
 
   private set hash(val: string) {
     this._document.salt = val;
+  }
+
+  public toJson(): models.user.Attributes {
+    const {
+      id,
+      firstname,
+      lastname,
+      username,
+      email,
+      salt,
+      hash,
+      role,
+      joinedAt,
+    } = this;
+
+    return {
+      id,
+      firstname,
+      lastname,
+      username,
+      email,
+      salt,
+      hash,
+      role,
+      joinedAt
+    }
   }
 
 }

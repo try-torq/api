@@ -1,10 +1,11 @@
 import * as mongoose from 'mongoose';
-import uniqueValidator from 'mongoose-unique-validator';
+import * as uniqueValidator from 'mongoose-unique-validator';
 
 import { AbstractModel } from './AbstractModel';
 import { ICarModelDocument } from './CarModel';
 import { NotFoundException, ValidationException } from '../exceptions';
 import { IUserDocument } from './User';
+import { ICarTagDocument } from '.';
 
 const CarPostSchema = new mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
@@ -26,6 +27,10 @@ const CarPostSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'CarModel',
   },
+  tags: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'CarTag',
+  }],
   year: {
     type: Number,
     required: true,
@@ -68,6 +73,7 @@ export interface ICarPostDocument extends mongoose.Document {
   nickname: string;
   owner: IUserDocument;
   carModel: ICarModelDocument;
+  tags: ICarTagDocument[];
   year: number;
   saleStatus: string;
   price?: number;
@@ -77,7 +83,7 @@ export interface ICarPostDocument extends mongoose.Document {
 
 CarPostSchema.plugin(uniqueValidator);
 
-export const CarPostModel = mongoose.model('User', CarPostSchema);
+export const CarPostModel = mongoose.model<ICarPostDocument>('CarPost', CarPostSchema);
 
 export class CarPost extends AbstractModel<ICarPostDocument> {
   public get id(): string {
@@ -126,6 +132,10 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
 
   public get editedAt(): Date {
     return this._document.editedAt;
+  }
+
+  public get tags(): ICarTagDocument[] {
+    return this._document.tags;
   }
 
   public set nickname(val: string) {
