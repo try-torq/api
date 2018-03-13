@@ -32,3 +32,8 @@ export function validatePassword(password: string) {
 
   return true;
 }
+
+export function validatePositiveInteger(n: number) {
+  return n % 1 === 0
+    && n >= 0
+}

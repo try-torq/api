@@ -18,11 +18,11 @@ export class Database {
     throw error;
   }
 
-  private static onConnect() {
+  private static onConnect(): void {
     log.info(`connected to database ${this.uri}`);
   }
 
-  private static onDisconnect() {
+  private static onDisconnect(): void {
     log.info(`disconnect from database ${this.uri}`);
   }
 
