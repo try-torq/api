@@ -11,7 +11,7 @@ export const config = <config.Environemnts>{
     logger: {
       debug: 'app*',
       console: {
-        level: 'error'
+        levels: new Set(['error', 'warn', 'debug', 'info'])
       }
     }
   },
@@ -28,7 +28,7 @@ export const config = <config.Environemnts>{
     logger: {
       debug: '',
       console: {
-        level: 'none'
+        levels: new Set([])
       }
     }
   },
@@ -46,7 +46,7 @@ export const config = <config.Environemnts>{
     logger: {
       debug: '',
       console: {
-        level: 'debug'
+        levels: new Set(['error', 'debug'])
       }
     }
   }
