@@ -12,8 +12,7 @@ import {
   Environment,
   Server,
   Logger,
-  winstonStream,
-  debugStream
+  responseStream,
 } from './core';
 
 export class App {
@@ -32,8 +31,7 @@ export class App {
     this.express
       .use(helmet())
       .use(cors())
-      .use(morgan('dev', debugStream))
-      .use(morgan('combined', winstonStream))
+      .use(morgan('combined', { stream: responseStream }))
       .use(helmet.noCache())
       .use(helmet.hsts({
         maxAge: 31536000,

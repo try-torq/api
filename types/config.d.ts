@@ -30,6 +30,6 @@ declare module config {
   }
 
   interface LoggerConsoleConfiguration {
-    level: string;
+    levels: Set<string>;
   }
 }
