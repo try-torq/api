@@ -7,7 +7,6 @@ import { ICarModelDocument } from './CarModel';
 import { NotFoundException, ValidationException } from '../exceptions';
 
 export const CarTagSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
   name: {
     type: String,
     unique: true,
@@ -31,8 +30,8 @@ CarTagSchema.plugin(uniqueValidator);
 export interface ICarTagDocument extends mongoose.Document {
   _id: string;
   name: string;
-  carModels: ICarModelDocument[];
-  carPosts: ICarPostDocument[];
+  carModels: string[];
+  carPosts: string[];
 }
 
 export const CarTagModel = mongoose.model<ICarTagDocument>('CarTag', CarTagSchema);
@@ -46,11 +45,16 @@ export class CarTag extends AbstractModel<ICarTagDocument> {
     return this._document.name;
   }
 
-  public get carModels(): ICarModelDocument[] {
+  public get carModels(): string[] {
     return this._document.carModels;
   }
 
-  public get carPosts(): ICarPostDocument[] {
+  public get carPosts(): string[] {
     return this._document.carPosts;
+  }
+
+  public toJson(): models.carTag.Attributes {
+    const { id, name, carModels, carPosts } = this;
+    return { id, name, carModels, carPosts };
   }
 }

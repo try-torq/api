@@ -8,12 +8,10 @@ import { NotFoundException, ValidationException } from '../exceptions';
 import { ICarTagDocument } from '.';
 
 export const CarModelSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
   name: {
     type: String,
     trim: true,
     required: true,
-    unique: true,
     min: 1,
     max: 50,
   },
@@ -30,6 +28,7 @@ export const CarModelSchema = new mongoose.Schema({
   },
   make: {
     type: mongoose.Schema.Types.ObjectId,
+    required: true,
     ref: 'CarMake'
   },
   tags: [{
@@ -42,12 +41,17 @@ export const CarModelSchema = new mongoose.Schema({
   }]
 })
 
+CarModelSchema.index(
+  { name: 1, make: 1 },
+  { unique: true }
+)
+
 export interface ICarModelDocument extends mongoose.Document {
   _id: string;
   name: string;
   lastYear?: number;
   firstYear: number;
-  make: ICarMakeDocument;
+  make: string;
   carPosts: ICarPostDocument;
   tags: ICarTagDocument;
 }
@@ -80,7 +84,7 @@ export class CarModel extends AbstractModel<ICarModelDocument> {
     return this._document.firstYear;
   }
 
-  public get make(): ICarMakeDocument {
+  public get make(): string {
     return this._document.make;
   }
 
@@ -102,5 +106,23 @@ export class CarModel extends AbstractModel<ICarModelDocument> {
 
   public set firstYear(val: number) {
     this._document.firstYear = val;
+  }
+
+  public toJson(): models.carModel.Attributes {
+    const {
+      id,
+      name,
+      firstYear,
+      lastYear,
+      make,
+    } = this
+
+    return {
+      id,
+      name,
+      firstYear,
+      lastYear,
+      make
+    }
   }
 }

@@ -12,7 +12,7 @@ interface FindUserByEmailArguments {
 }
 
 export class FindUserByEmailQuery extends AbstractQuery implements GraphQLFieldConfig<any, any>, IGraphQLQuery {
-  private log = Logger('app:schemas:queries:FindUserByEmail');
+  private log = Logger('app:schemas:queries:FindUserByEmailQuery');
 
   public type = UserType;
   public args = {

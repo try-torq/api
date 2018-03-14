@@ -3,6 +3,7 @@ declare module models {
     interface Attributes {
       id?: string;
       name?: string;
+      models?: string[];
     }
   }
 }

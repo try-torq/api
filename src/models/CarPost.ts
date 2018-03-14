@@ -8,12 +8,10 @@ import { IUserDocument } from './User';
 import { ICarTagDocument } from '.';
 
 const CarPostSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
   nickname: {
     type: String,
     trim: true,
     required: true,
-    unique: true,
     min: 1,
     max: 50,
   },
@@ -34,7 +32,6 @@ const CarPostSchema = new mongoose.Schema({
   year: {
     type: Number,
     required: true,
-    unique: true,
   },
   saleStatus: {
     type: String,
@@ -43,7 +40,6 @@ const CarPostSchema = new mongoose.Schema({
   },
   price: {
     type: Number,
-    default: 0,
   },
 }, {
   timestamps: {
@@ -51,6 +47,11 @@ const CarPostSchema = new mongoose.Schema({
     updatedAt: 'editedAt',
   }
 });
+
+CarPostSchema.index(
+  { owner: 1, nickname: 1 },
+  { unique: true }
+);
 
 CarPostSchema.pre('save', async function(next: Function) {
   const { year, carModel } = this
@@ -71,9 +72,9 @@ CarPostSchema.pre('save', async function(next: Function) {
 export interface ICarPostDocument extends mongoose.Document {
   _id: string;
   nickname: string;
-  owner: IUserDocument;
-  carModel: ICarModelDocument;
-  tags: ICarTagDocument[];
+  owner: string;
+  carModel: string;
+  tags: string[];
   year: number;
   saleStatus: string;
   price?: number;
@@ -94,11 +95,11 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
     return this._document.nickname;
   }
 
-  public get owner(): IUserDocument {
+  public get owner(): string {
     return this._document.owner;
   }
 
-  public get carModel(): ICarModelDocument {
+  public get carModel(): string {
     return this._document.carModel;
   }
 
@@ -134,7 +135,7 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
     return this._document.editedAt;
   }
 
-  public get tags(): ICarTagDocument[] {
+  public get tags(): string[] {
     return this._document.tags;
   }
 
@@ -144,5 +145,33 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
 
   public set year(val: number) {
     this._document.year = val
+  }
+
+  public toJson(): models.carPost.Attributes {
+    const {
+      id,
+      nickname,
+      owner,
+      carModel,
+      saleStatus,
+      price,
+      publishedAt,
+      editedAt,
+      tags,
+      year
+    } = this
+
+    return {
+      id,
+      nickname,
+      owner,
+      carModel,
+      saleStatus,
+      price,
+      publishedAt,
+      editedAt,
+      tags,
+      year
+    }
   }
 }

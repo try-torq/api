@@ -26,7 +26,7 @@ export class FindAllCarMakesQuery extends AbstractQuery implements GraphQLFieldC
     args: FindAllCarMakesArguments,
     context: Context<FindAllCarMakesArguments>,
     info: GraphQLResolveInfo
-  ): Promise<models.carMake.Attributes> {
+  ): Promise<models.carMake.Attributes[]> {
     this.log.debug(`resolve findAllCarMakes()`);
     const makes = await CarMakeService.findAll();
     return makes.map(make => make.toJson());

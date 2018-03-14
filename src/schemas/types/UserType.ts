@@ -9,6 +9,7 @@ import {
   UsernameField,
   JoinedAtField,
 } from '../fields';
+import { CarPostsField } from '../fields/CarPostsField';
 
 export const UserType = new GraphQLObjectType({
   name: 'User',
@@ -21,5 +22,6 @@ export const UserType = new GraphQLObjectType({
     username: new UsernameField(),
     role: new RoleField(),
     joinedAt: new JoinedAtField(),
+    cars: new CarPostsField(),
   })
 });

@@ -5,21 +5,21 @@ import {
   NameField,
   LastYearField,
   FirstYearField,
-  // MakeField,
+  CarMakeField,
   // TagsField,
   // CarPostsField,
 } from '../fields';
 
-export const CarMakeType = new GraphQLObjectType({
-  name: 'CarMake',
-  description: 'A single car manufacturer.',
+export const CarModelType = new GraphQLObjectType({
+  name: 'CarModel',
+  description: 'A single car model.',
   fields: () => ({
     id: new IdField(),
     name: new NameField(),
     lastYear: new LastYearField(),
     firstYear: new FirstYearField(),
     // tags: new TagsField(),
-    // make: new MakeField(),
+    make: new CarMakeField(),
     // carPosts: new CarPostsField(),
   })
 });

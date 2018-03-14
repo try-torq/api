@@ -3,9 +3,14 @@ declare module models {
     interface Attributes {
       id?: string;
       nickname?: string;
-      year: number;
-      saleStatus: string;
-      price: number;
+      year?: number;
+      saleStatus?: string;
+      publishedAt?: Date;
+      editedAt?: Date;
+      price?: number;
+      owner?: string;
+      carModel?: string;
+      tags?: string[];
     }
   }
 }

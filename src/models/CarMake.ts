@@ -23,7 +23,7 @@ export const CarMakeSchema = new mongoose.Schema({
 export interface ICarMakeDocument extends mongoose.Document {
   _id: string;
   name: string;
-  models: ICarModelDocument[];
+  models: string[];
 }
 
 CarMakeSchema.plugin(uniqueValidator);
@@ -39,7 +39,7 @@ export class CarMake extends AbstractModel<ICarMakeDocument> {
     return this._document.name;
   }
 
-  public get models(): ICarModelDocument[] {
+  public get models(): string[] {
     return this._document.models;
   }
 
@@ -48,7 +48,7 @@ export class CarMake extends AbstractModel<ICarMakeDocument> {
   }
 
   public toJson(): models.carMake.Attributes {
-    const { id, name } = this
-    return { id, name }
+    const { id, name, models } = this
+    return { id, name, models }
   }
 }

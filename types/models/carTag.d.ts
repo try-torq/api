@@ -3,6 +3,8 @@ declare module models {
     interface Attributes {
       id?: string;
       name?: string;
+      carModels?: string[];
+      carPosts?: string[];
     }
   }
 }
