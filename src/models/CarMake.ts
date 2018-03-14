@@ -6,7 +6,6 @@ import { ICarModelDocument } from './CarModel';
 import { NotFoundException, ValidationException } from '../exceptions';
 
 export const CarMakeSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
   name: {
     type: String,
     trim: true,
@@ -46,5 +45,10 @@ export class CarMake extends AbstractModel<ICarMakeDocument> {
 
   public set name(val: string) {
     this._document.name = val;
+  }
+
+  public toJson(): models.carMake.Attributes {
+    const { id, name } = this
+    return { id, name }
   }
 }

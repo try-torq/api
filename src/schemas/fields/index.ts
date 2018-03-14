@@ -7,3 +7,8 @@ export * from './RoleField';
 export * from './EmailField';
 export * from './UsernameField';
 export * from './JoinedAtField';
+export * from './NameField';
+export * from './YearField';
+export * from './FirstYearField';
+export * from './LastYearField';
+export * from './SaleStatusField';

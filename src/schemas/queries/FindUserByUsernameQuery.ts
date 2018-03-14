@@ -19,12 +19,20 @@ export class FindUserByUsernameQuery extends AbstractQuery implements GraphQLFie
     username: { type: new GraphQLNonNull(GraphQLString) }
   }
 
-  public before(context: Context<FindUserByUsernameArguments>, args: FindUserByUsernameArguments): Promise<FindUserByUsernameArguments> {
+  public before(
+    context: Context<FindUserByUsernameArguments>,
+    args: FindUserByUsernameArguments
+  ): Promise<FindUserByUsernameArguments> {
     this.log.debug('hook before args', args);
     return Promise.resolve(args);
   }
 
-  public async execute(root: RootValue, args: FindUserByUsernameArguments, context: Context<FindUserByUsernameArguments>, info: GraphQLResolveInfo): Promise<models.user.Attributes> {
+  public async execute(
+    root: RootValue,
+    args: FindUserByUsernameArguments,
+    context: Context<FindUserByUsernameArguments>,
+    info: GraphQLResolveInfo
+  ): Promise<models.user.Attributes> {
     this.log.debug(`resolve findAuthorByUsername(${args.username})`);
     const user = await UserService.findByUsername(args.username);
     return user.toJson();

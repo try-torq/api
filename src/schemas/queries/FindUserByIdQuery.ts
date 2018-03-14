@@ -7,7 +7,7 @@ import { UserService } from '../../services';
 import { UserType } from '../types';
 import { AbstractQuery, IGraphQLQuery } from './AbstractQuery';
 
-interface IIdArguments {
+interface FindUserByIdArguments {
   id: string;
 }
 
@@ -19,12 +19,20 @@ export class FindUserByIdQuery extends AbstractQuery implements GraphQLFieldConf
     id: { type: new GraphQLNonNull(GraphQLID) }
   }
 
-  public before(context: Context<IIdArguments>, args: IIdArguments): Promise<IIdArguments> {
+  public before(
+    context: Context<FindUserByIdArguments>,
+    args: FindUserByIdArguments
+  ): Promise<FindUserByIdArguments> {
     this.log.debug('hook before args', args);
     return Promise.resolve(args);
   }
 
-  public async execute(root: RootValue, args: IIdArguments, context: Context<IIdArguments>, info: GraphQLResolveInfo): Promise<models.user.Attributes> {
+  public async execute(
+    root: RootValue,
+    args: FindUserByIdArguments,
+    context: Context<FindUserByIdArguments>,
+    info: GraphQLResolveInfo
+  ): Promise<models.user.Attributes> {
     this.log.debug('resolve findAuthorById(%s)', args.id);
     const user = await UserService.findById(args.id);
     return user.toJson();

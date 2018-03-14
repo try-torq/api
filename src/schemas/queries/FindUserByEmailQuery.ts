@@ -7,7 +7,7 @@ import { UserService } from '../../services';
 import { UserType } from '../types';
 import { AbstractQuery, IGraphQLQuery } from './AbstractQuery';
 
-interface IIdArguments {
+interface FindUserByEmailArguments {
   email: string;
 }
 
@@ -19,14 +19,22 @@ export class FindUserByEmailQuery extends AbstractQuery implements GraphQLFieldC
     email: { type: new GraphQLNonNull(GraphQLString) }
   }
 
-  public before(context: Context<IIdArguments>, args: IIdArguments): Promise<IIdArguments> {
+  public before(
+    context: Context<FindUserByEmailArguments>,
+    args: FindUserByEmailArguments
+  ): Promise<FindUserByEmailArguments> {
     this.log.debug('hook before args', args);
     return Promise.resolve(args);
   }
 
-  public async execute(root: RootValue, args: IIdArguments, context: Context<IIdArguments>, info: GraphQLResolveInfo): Promise<models.user.Attributes> {
+  public async execute(
+    root: RootValue,
+    args: FindUserByEmailArguments,
+    context: Context<FindUserByEmailArguments>,
+    info: GraphQLResolveInfo
+  ): Promise<models.user.Attributes> {
     this.log.debug(`resolve findAuthorByEmail(${args.email})`);
-    const user = await UserService.findById(args.email);
+    const user = await UserService.findByEmail(args.email);
     return user.toJson();
   }
 }

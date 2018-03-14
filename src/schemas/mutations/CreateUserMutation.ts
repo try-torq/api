@@ -5,11 +5,10 @@ import { Logger } from '../../core';
 import { Context } from '../../context';
 import { ValidationException } from '../../exceptions';
 import { UserType } from '../types';
-// import { AuthorModel } from '../../models';
 import { AbstractMutation, IGraphQLMutation } from './AbstractMutation';
 import { UserService } from '../../services';
 
-export interface ICreateUserMutationArguments {
+export interface CreateUserArguments {
   firstname: string;
   lastname: string;
   username: string;
@@ -27,14 +26,17 @@ export class CreateUserMutation extends AbstractMutation implements IGraphQLMuta
     password: { type: new GraphQLNonNull(GraphQLString) },
   }
 
-  public before(context: Context<ICreateUserMutationArguments>, args: ICreateUserMutationArguments): Promise<ICreateUserMutationArguments> {
+  public before(
+    context: Context<CreateUserArguments>,
+    args: CreateUserArguments
+  ): Promise<CreateUserArguments> {
     return Promise.resolve(args);
   }
 
   public async execute(
     root: RootValue,
-    args: ICreateUserMutationArguments,
-    context: Context<ICreateUserMutationArguments>
+    args: CreateUserArguments,
+    context: Context<CreateUserArguments>
   ): Promise<models.user.Attributes> {
     console.log(args);
     const user = await UserService.create(args);
