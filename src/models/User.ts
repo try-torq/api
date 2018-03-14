@@ -72,7 +72,7 @@ export interface IUserDocument extends mongoose.Document {
   salt: string;
   hash: string;
   role: string;
-  carPosts: ICarPostDocument[];
+  carPosts: string[];
   joinedAt: Date;
 }
 
@@ -168,7 +168,7 @@ export class User extends AbstractModel<IUserDocument> {
     return this._document.joinedAt;
   }
 
-  public get carPosts(): ICarPostDocument[] {
+  public get carPosts(): string[] {
     return this._document.carPosts;
   }
 
@@ -207,6 +207,7 @@ export class User extends AbstractModel<IUserDocument> {
       hash,
       role,
       joinedAt,
+      carPosts
     } = this;
 
     return {
@@ -218,7 +219,8 @@ export class User extends AbstractModel<IUserDocument> {
       salt,
       hash,
       role,
-      joinedAt
+      joinedAt,
+      carPosts
     }
   }
 

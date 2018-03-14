@@ -1,4 +1,4 @@
-import { GraphQLFieldConfig, GraphQLNonNull, GraphQLString } from 'graphql';
+import { GraphQLFieldConfig, GraphQLNonNull, GraphQLString, GraphQLInt } from 'graphql';
 
 import { RootValue } from '../../RootValue';
 import { Logger } from '../../core';
@@ -6,17 +6,15 @@ import { Context } from '../../context';
 import { ValidationException } from '../../exceptions';
 import { CarMakeType } from '../types';
 import { AbstractMutation, IGraphQLMutation } from './AbstractMutation';
-import { CarMakeService } from '../../services';
+import { CarMakeService, INewCarMakeBuffer } from '../../services';
 
-export interface AddCarMakeArguments {
-  name: string;
-}
+export interface AddCarMakeArguments extends INewCarMakeBuffer { }
 
 export class AddCarMakeMutation extends AbstractMutation implements IGraphQLMutation {
   private log = Logger('app:schemas:mutations:AddCarMakeMutation')
   public type = CarMakeType;
   public args = {
-    name: { type: new GraphQLNonNull(GraphQLString) }
+    name: { type: new GraphQLNonNull(GraphQLString) },
   }
 
   public async execute(

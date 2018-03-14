@@ -10,6 +10,7 @@ declare module models {
       hash?: string;
       role?: string;
       joinedAt?: Date;
+      carPosts?: string[];
     }
   }
 }

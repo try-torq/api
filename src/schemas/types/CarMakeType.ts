@@ -3,6 +3,7 @@ import { GraphQLObjectType } from 'graphql';
 import {
   IdField,
   NameField,
+  CarModelsField,
 } from '../fields';
 
 export const CarMakeType = new GraphQLObjectType({
@@ -11,5 +12,6 @@ export const CarMakeType = new GraphQLObjectType({
   fields: () => ({
     id: new IdField(),
     name: new NameField(),
+    models: new CarModelsField(),
   })
 });

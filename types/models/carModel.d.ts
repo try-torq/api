@@ -5,6 +5,7 @@ declare module models {
       name?: string;
       lastYear?: Number;
       firstYear?: Number;
+      make?: string,
     }
   }
 }

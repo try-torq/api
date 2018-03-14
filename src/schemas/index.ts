@@ -9,7 +9,9 @@ import {
 } from './queries';
 import {
   CreateUserMutation,
-  AddCarMakeMutation
+  CreateCarPostMutation,
+  AddCarMakeMutation,
+  AddCarModelMutation
 } from './mutations';
 
 export class Schema {
@@ -27,8 +29,10 @@ export class Schema {
   private static rootMutation = new GraphQLObjectType({
     name: 'RootMutation',
     fields: {
+      addCarModel: new AddCarModelMutation(),
       addCarMake: new AddCarMakeMutation(),
       createUser: new CreateUserMutation(),
+      createCarPost: new CreateCarPostMutation(),
     }
   })
 
