@@ -42,7 +42,7 @@ export class CarPostFavorite extends AbstractModel<ICarPostPinDocument> {
     return this._document.pinnedAt;
   }
 
-  public toJson(): models.carPostFavorite.Attributes {
+  public toJson(): models.carPostPin.Attributes {
     const { id, carPost, user, pinnedAt } = this;
     return { id, carPost, user, pinnedAt };
   }

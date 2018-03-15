@@ -319,6 +319,12 @@
   dependencies:
     "@types/express" "*"
 
+"@types/jsonwebtoken@^7.2.5":
+  version "7.2.5"
+  resolved "https://registry.yarnpkg.com/@types/jsonwebtoken/-/jsonwebtoken-7.2.5.tgz#413159d570ec45fc3e7da7ea3f7bca6fb9300e72"
+  dependencies:
+    "@types/node" "*"
+
 "@types/jwt-simple@^0.5.33":
   version "0.5.33"
   resolved "https://registry.yarnpkg.com/@types/jwt-simple/-/jwt-simple-0.5.33.tgz#fb839cabe81437954f7d0cd01760ad8096ec526e"
