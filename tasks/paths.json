@@ -1,6 +1,8 @@
 {
   "main": "main.ts",
   "src": "src",
+  "types": "types",
   "test": "test",
-  "dist": "dist"
+  "dist": "dist",
+  "tsconfig": "tsconfig.json"
 }
