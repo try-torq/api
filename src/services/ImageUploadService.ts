@@ -13,8 +13,11 @@ export class ImageUploadService {
   });
 
   private static _storage = storage({
-    projectId: 'torq-f0c17',
-    keyFilename: 'gcloud-service-acc.json'
+    projectId: Environment.config.cloudStorage.projectId,
+    credentials: {
+      client_email: Environment.config.cloudStorage.clientEmail,
+      private_key: Environment.config.cloudStorage.privateKey,
+    },
   });
 
   private static _bucket = ImageUploadService._storage.bucket('torq-f0c17.appspot.com')
