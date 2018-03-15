@@ -24,21 +24,13 @@ export class CreateUserMutation extends AbstractMutation implements IGraphQLMuta
     username: { type: new GraphQLNonNull(GraphQLString) },
     email: { type: new GraphQLNonNull(GraphQLString) },
     password: { type: new GraphQLNonNull(GraphQLString) },
-  }
-
-  public before(
-    context: Context<CreateUserArguments>,
-    args: CreateUserArguments
-  ): Promise<CreateUserArguments> {
-    return Promise.resolve(args);
-  }
+  };
 
   public async execute(
     root: RootValue,
     args: CreateUserArguments,
     context: Context<CreateUserArguments>
   ): Promise<models.user.Attributes> {
-    console.log(args);
     const user = await UserService.create(args);
     return user.toJson();
   }

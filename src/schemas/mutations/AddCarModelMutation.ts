@@ -2,7 +2,7 @@ import { GraphQLFieldConfig, GraphQLNonNull, GraphQLString, GraphQLInt } from 'g
 
 import { RootValue } from '../../RootValue';
 import { Logger } from '../../core';
-import { Context } from '../../context';
+import { Context, AuthRole } from '../../context';
 import { ValidationException } from '../../exceptions';
 import { CarModelType } from '../types';
 import { AbstractMutation, IGraphQLMutation } from './AbstractMutation';
@@ -13,6 +13,7 @@ export interface AddCarModelArguments extends INewCarModelBuffer { }
 export class AddCarModelMutation extends AbstractMutation implements IGraphQLMutation {
   private log = Logger('app:schemas:mutations:AddCarMakeMutation')
   public type = CarModelType;
+  public minRole = AuthRole.admin;
   public args = {
     name: { type: new GraphQLNonNull(GraphQLString) },
     firstYear: { type: new GraphQLNonNull(GraphQLInt) },

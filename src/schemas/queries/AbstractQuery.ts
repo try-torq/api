@@ -1,17 +1,18 @@
 import { GraphQLResolveInfo } from 'graphql';
 
-import { Context } from '../../context';
+import { Context, AuthRole } from '../../context';
 import { RootValue } from '../../RootValue';
+import { UnauthorizedException } from '../../exceptions';
 
 export interface IGraphQLQuery {
-  allow: string[];
+  minRole: AuthRole;
   before<A, S>(context: Context<A>, args: A, source?: S): Promise<A>;
   after<R, A, S>(result: R, context: Context<A>, args: A, source?: S): Promise<R>;
   execute<R, A>(root: RootValue, args: A, context: Context<A>, info: GraphQLResolveInfo): Promise<R>;
 }
 
 export class AbstractQuery {
-  public allow: string[] = ['user'];
+  public minRole = AuthRole.none;
 
   public before<A, S>(context: Context<A>, args: A, source?: S): Promise<A> {
     return Promise.resolve(args);
@@ -28,10 +29,8 @@ export class AbstractQuery {
   public resolve = async <R, A>(root: RootValue, args: A, context: Context<A>, info: GraphQLResolveInfo): Promise<R> => {
     context.args = args;
 
-    if (!context.hasUserRoles(this.allow)) {
-      context.response.send(401);
-      return Promise.reject('401 Unauthorized');
-    }
+    if (this.minRole > context.user.authRole)
+      throw new UnauthorizedException('Insufficient privileges for this query/mutation');
 
     args = await this.before(context, args);
 

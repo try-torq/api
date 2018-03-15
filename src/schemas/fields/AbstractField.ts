@@ -1,16 +1,16 @@
 
-import { Context } from '../../context';
+import { UnauthorizedException } from '../../exceptions';
+import { Context, AuthRole } from '../../context';
 
 export interface IGraphQLField {
-  allow: string[];
+  minRole: AuthRole;
   before<A, S>(context: Context<A>, args: A, source: S): Promise<A>;
   after<R, A, S>(result: R, context: Context<A>, args: A, source: S): Promise<R>;
   execute<R, A, S>(source: S, args: A, context: Context<A>): Promise<R>;
 }
 
 export class AbstractField {
-
-  public allow: string[] = [];
+  public minRole = AuthRole.none;
 
   public before<A, S>(context: Context<A>, args: A, source: S): Promise<A> {
     return Promise.resolve(args);
@@ -25,11 +25,9 @@ export class AbstractField {
   }
 
   public resolve = async <R, A, S>(source: S, args: A, context: Context<A>): Promise<R> => {
-    //first check roles
-    // if (!context.hasUserRoles(this.allow)) {
-    //   context.response.send(401);
-    //   return Promise.reject('401 Unauthorized');
-    // }
+
+    if (this.minRole > context.user.authRole)
+      throw new UnauthorizedException();
 
     args = await this.before(context, args, source);
 

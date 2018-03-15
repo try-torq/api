@@ -1,4 +1,5 @@
 import * as Express from 'express';
+import { Logger } from '../core';
 
 export interface IUserClaims {
   id: string;
@@ -7,11 +8,21 @@ export interface IUserClaims {
   role: string;
 }
 
+export enum AuthRole {
+  none = 1,
+  user = 2,
+  mod = 3,
+  admin = 4
+}
+
 export class UserContext {
+  private static log = Logger('app:context:UserContext')
   private claims?: IUserClaims;
+  public authRole: AuthRole;
 
   constructor(private request: Express.Request) {
     this.claims = (request as any).user as IUserClaims;
+    this.authRole = (request as any).authStatus as AuthRole;
   }
 
   public get id(): string {

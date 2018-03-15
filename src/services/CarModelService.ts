@@ -43,11 +43,8 @@ export class CarModelService {
   }
 
   public static async findByCarMakeAndName(makeName: string, name: string): Promise<CarModel> {
-    this.log.debug(`makeName => ${makeName}; name => ${name}`);
     const { id } = await CarMakeService.findByName(makeName);
-    this.log.info(`car make id => ${id}`);
     const document = await CarModelModel.findOne({ make: id, name });
-    console.log(`car document => ${document}`);
     return new CarModel(document);
   }
 
