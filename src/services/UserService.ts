@@ -1,7 +1,7 @@
 import { Logger } from '../core';
-import { IUserDocument, User, UserModel } from '../models'
+import { IUserDocument, User, UserModel, IUserAuthenticationBuffer } from '../models'
 import { IAbstractService, IPagenationOptions } from './AbstractService';
-import { NotFoundException } from '../exceptions';
+import { NotFoundException, UnauthorizedException } from '../exceptions';
 
 export interface INewUserBuffer {
   firstname: string;
@@ -13,6 +13,8 @@ export interface INewUserBuffer {
 }
 
 export class UserService {
+  private static log = Logger('app:services:UserService');
+
   public static async findAll(options?: IPagenationOptions): Promise<User[]> {
     const { offset, limit } = options;
     const users = await UserModel.find()
@@ -20,6 +22,15 @@ export class UserService {
       .limit(limit || 100);
     return users
       .map(document => new User(document));
+  }
+
+  public static async authenticate(username: string, password: string): Promise<IUserAuthenticationBuffer> {
+    const user = await this.findByUsername(username);
+    const isMatch = await user.checkPassword(password);
+    if (!isMatch)
+      throw new UnauthorizedException('invalid username or password');
+    const token = await user.genToken();
+    return { user: user.toJson(), token }
   }
 
   public static async findById(id: string): Promise<User> {
@@ -64,10 +75,7 @@ export class UserService {
       role: role || 'user'
     });
 
-    await document.save();
-    const user = new User(document);
-
-    return user;
+    return new User(document);
   }
 
   public static async deleteById(id: string): Promise<User> {

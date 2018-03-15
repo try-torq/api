@@ -6,3 +6,5 @@ export * from './RoleType';
 export * from './SaleStatusType';
 export * from './TagType';
 export * from './CarPostType';
+export * from './AuthenticationBufferType';
+

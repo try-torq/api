@@ -1,11 +1,12 @@
 import * as mongoose from 'mongoose';
 import * as bcrypt from 'bcrypt';
-import * as jwt from 'jwt-simple';
+import * as jwt from 'jsonwebtoken';
 import * as uniqueValidator from 'mongoose-unique-validator';
 
 import { AbstractModel } from './AbstractModel';
 import { validateEmail, validatePassword, validateUsername } from '../utils';
 import { ICarPostDocument } from './CarPost';
+import { Logger } from '../core';
 
 export const UserSchema = new mongoose.Schema({
   firstname: {
@@ -91,6 +92,11 @@ export interface IUserAttributes {
   joinedAt?: Date;
 }
 
+export interface IUserAuthenticationBuffer {
+  user: models.user.Attributes;
+  token: string;
+}
+
 interface ICipherSet {
   salt: string;
   hash: string;
@@ -98,11 +104,13 @@ interface ICipherSet {
 
 export class User extends AbstractModel<IUserDocument> {
 
+  private static log = Logger('app:models:User');
+
   public genToken(): string {
     const { id, email, username, role } = this;
     const payload = { id, email, username, role };
     // TODO: - use prk/puk hs256 for secret
-    return jwt.encode(payload, 'SECRET');
+    return jwt.sign(payload, 'SECRET');
   }
 
   public async setPassword(password: string) {
@@ -111,6 +119,11 @@ export class User extends AbstractModel<IUserDocument> {
       this.hash = hash;
       this.salt = salt;
     }
+  }
+
+  public async checkPassword(attempt: string): Promise<boolean> {
+    const { hash } = this;
+    return await bcrypt.compare(attempt, hash);
   }
 
   public static async generateSaltAndHash(password: string): Promise<ICipherSet> {
@@ -140,7 +153,7 @@ export class User extends AbstractModel<IUserDocument> {
   }
 
   private get hash(): string {
-    return this._document.salt;
+    return this._document.hash;
   }
 
   public get role(): string {
