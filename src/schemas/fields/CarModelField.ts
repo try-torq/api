@@ -9,7 +9,7 @@ import { CarModelService } from '../../services';
 
 export class CarModelField extends AbstractField implements GraphQLField<CarPost | any, any> {
   private log = Logger('app:schemas:fields:CarModelField');
-  public type = new GraphQLList(CarModelType);
+  public type = CarModelType;
   public name = 'carModel';
   public description = 'The associated car model.';
   public args;
@@ -24,7 +24,7 @@ export class CarModelField extends AbstractField implements GraphQLField<CarPost
     args: any,
     context: Context<any>
   ): Promise<models.carModel.Attributes> {
-    const model = await CarModelService.findById(source.model);
+    const model = await CarModelService.findById(source.carModel);
     return model.toJson()
   }
 }

@@ -221,7 +221,7 @@ export class User extends AbstractModel<IUserDocument> {
       role,
       joinedAt,
       carPosts
-    }
+    };
   }
 
 }

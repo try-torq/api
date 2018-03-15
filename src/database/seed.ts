@@ -9,7 +9,7 @@ export default (async function() {
       email: 'charlesc.kenney@gmail.com',
       password: 'password',
     }
-  ]
+  ];
 
   userBuffers.forEach(async buffer => await UserService.create(buffer));
-})
+});

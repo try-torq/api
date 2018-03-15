@@ -39,12 +39,12 @@ export const CarModelSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'CarPost'
   }]
-})
+});
 
 CarModelSchema.index(
   { name: 1, make: 1 },
   { unique: true }
-)
+);
 
 export interface ICarModelDocument extends mongoose.Document {
   _id: string;
@@ -115,7 +115,7 @@ export class CarModel extends AbstractModel<ICarModelDocument> {
       firstYear,
       lastYear,
       make,
-    } = this
+    } = this;
 
     return {
       id,
@@ -123,6 +123,6 @@ export class CarModel extends AbstractModel<ICarModelDocument> {
       firstYear,
       lastYear,
       make
-    }
+    };
   }
 }

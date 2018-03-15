@@ -159,7 +159,7 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
       editedAt,
       tags,
       year
-    } = this
+    } = this;
 
     return {
       id,
@@ -172,6 +172,6 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
       editedAt,
       tags,
       year
-    }
+    };
   }
 }
