@@ -7,5 +7,5 @@ export const notFoundMiddleware = (
   response: Express.Response,
   next: Express.NextFunction
 ) => {
-  next(new NotFoundException())
-}
+  next(new NotFoundException());
+};

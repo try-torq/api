@@ -6,7 +6,7 @@ import * as cors from 'cors';
 
 import { Exception } from './exceptions';
 import { UserService } from './services';
-import { GraphQLRoutes } from './routes'
+import { GraphQLRoutes, RootRoutes } from './routes'
 import {
   Database,
   Environment,
@@ -49,6 +49,7 @@ export class App {
         res.send(user.toJson());
       });
 
+    RootRoutes.mount(this.express);
     GraphQLRoutes.mount(this.express);
     
     Server.run(this.express, Environment.config.server.port);
