@@ -18,7 +18,7 @@ export const CarMakeSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'CarModel',
   }],
-})
+});
 
 export interface ICarMakeDocument extends mongoose.Document {
   _id: string;
@@ -48,7 +48,7 @@ export class CarMake extends AbstractModel<ICarMakeDocument> {
   }
 
   public toJson(): models.carMake.Attributes {
-    const { id, name, models } = this
-    return { id, name, models }
+    const { id, name, models } = this;
+    return { id, name, models };
   }
 }
