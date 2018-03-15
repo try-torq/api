@@ -62,6 +62,7 @@
     "babel-preset-env": "^1.6.1",
     "crossenv": "^0.0.2-security",
     "del": "^3.0.0",
+    "dotenv": "^5.0.1",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",

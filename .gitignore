@@ -1,3 +1,4 @@
 node_modules
 gcloud-service-acc.json
 dist
+.env

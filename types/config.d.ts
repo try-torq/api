@@ -9,6 +9,7 @@ declare module config {
     database: DatabaseConfiguration;
     server: ServerConfiguration;
     logger: LoggerConfiguration;
+    cloudStorage: GCloudStorageConfiguration; 
   }
 
   interface DatabaseConfiguration {
@@ -31,5 +32,12 @@ declare module config {
 
   interface LoggerConsoleConfiguration {
     levels: Set<string>;
+  }
+
+  interface GCloudStorageConfiguration {
+    projectId: string;
+    clientEmail: string;
+    privateKey: string;
+    storageBucketUri: string;
   }
 }
