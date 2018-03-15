@@ -20,7 +20,7 @@ export class ImageUploadService {
     },
   });
 
-  private static _bucket = ImageUploadService._storage.bucket('torq-f0c17.appspot.com')
+  private static _bucket = ImageUploadService._storage.bucket(Environment.config.cloudStorage.storageBucketUri)
 
   private static _uploadImage(directory: string, file: Express.Multer.File): Promise<string> {
     return new Promise((resolve, reject) => {

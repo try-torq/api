@@ -34,7 +34,7 @@ export const config = <config.Environemnts>{
     },
     server: {
       host: 'localhost',
-      port: process.env.PORT || '8080',
+      port: process.env.PORT || '5756',
       graphiql: false,
     },
     logger: {
@@ -52,11 +52,11 @@ export const config = <config.Environemnts>{
   // TODO: - update when production env est
   production: {
     database:{
-      uri: 'mongodb://localhost/torq-production',
+      uri: process.env.MONGODB_ATLAS_CLUSTER_URI,
     },
     server: {
-      host: 'torq-app.herokuapp.com',
-      port: process.env.PORT || '8080',
+      host: process.env.HOST || 'torq-app.herokuapp.com',
+      port: process.env.PORT || '80',
       graphiql: false,
     },
     logger: {
