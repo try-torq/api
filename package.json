@@ -9,8 +9,8 @@
     "install:clean": "yarn prune && ./node_modules/.bin/typings prune",
     "db:seed": "./node_modules/.bin/ts-node src/database/seed",
     "build": "./node_modules/.bin/gulp build",
-    "start": "node ./dist/main",
-    "dev": "./node_modules/.bin/nodemon --exec \"./node_modules/.bin/ts-node src/main\"",
+    "start": "NODE_ENV=production node ./dist/main",
+    "dev": "./node_modules/.bin/nodemon --watch './src/*/**.ts' --exec \"./node_modules/.bin/ts-node src/main\"",
     "clean": "./node_modules/.bin/gulp clean",
     "zip": "./node_modules/.bin/gulp zip",
     "lint": "./node_modules/.bin/gulp lint"
@@ -37,7 +37,7 @@
     "winston": "^2.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.40",
+    "@babel/core": "^7.0.0-beta.41",
     "@babel/register": "^7.0.0-beta.40",
     "@types/bcrypt": "^1.0.0",
     "@types/body-parser": "^1.16.8",
@@ -59,6 +59,9 @@
     "@types/winston": "^2.3.8",
     "at-types": "^0.0.2",
     "ava": "^0.25.0",
+    "babel-preset-env": "^1.6.1",
+    "crossenv": "^0.0.2-security",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -68,6 +71,7 @@
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-tslint": "^8.1.3",
     "gulp-typescript": "^4.0.1",
     "gulp-zip": "^4.1.0",

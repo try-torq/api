@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2018" 
+    "lib": ["esnext", "es2015"],
+    "target": "es5",
+    "sourceMap": true
   },
-  "files": [],
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
