@@ -1,11 +1,12 @@
 import * as Express from 'express';
 
 import { UserContext } from './UserContext';
+import { Logger } from '../core';
 
 export class Context<A> {
   // stores the resolve args
   private $args: A;
-  private user: UserContext;
+  public user: UserContext;
 
   constructor(
     private $request: Express.Request,

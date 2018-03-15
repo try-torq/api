@@ -4,6 +4,7 @@ import * as helmet from 'helmet';
 import * as morgan from 'morgan';
 import * as cors from 'cors';
 
+import { authMiddleware } from './middleware';
 import { Exception } from './exceptions';
 import { UserService } from './services';
 import { GraphQLRoutes, RootRoutes } from './routes'
@@ -31,23 +32,13 @@ export class App {
     this.express
       .use(helmet())
       .use(cors())
+      .use(authMiddleware)
       .use(morgan('combined', { stream: responseStream }))
       .use(helmet.noCache())
       .use(helmet.hsts({
         maxAge: 31536000,
         includeSubdomains: true,
-      }))
-      .post('/seed', async (req: express.Request, res: express.Response) => {
-        const user = await UserService.create({
-          firstname: 'charles',
-          lastname: 'kenney',
-          username: 'charles01',
-          email: 'charles@charles.com',
-          password: 'fooobar29',
-        });
-
-        res.send(user.toJson());
-      });
+      }));
 
     RootRoutes.mount(this.express);
     GraphQLRoutes.mount(this.express);

@@ -2,7 +2,7 @@ import { GraphQLNonNull, GraphQLString, GraphQLList, GraphQLInt, GraphQLFloat } 
 
 import { RootValue } from '../../RootValue';
 import { Logger } from '../../core';
-import { Context } from '../../context';
+import { Context, AuthRole } from '../../context';
 import { CarPostType, SaleStatusType } from '../types';
 import { AbstractMutation, IGraphQLMutation } from './AbstractMutation';
 import { CarPostService, INewCarPostBuffer } from '../../services';
@@ -12,6 +12,7 @@ export interface CreateCarPostArguments extends INewCarPostBuffer { }
 export class CreateCarPostMutation extends AbstractMutation implements IGraphQLMutation {
   private log = Logger('app:schemas:mutations:CreateCarPostMutation');
   public type = CarPostType;
+  public minRole = AuthRole.user;
   public args = {
     nickname: { type: new GraphQLNonNull(GraphQLString) },
     carModelName: { type: new GraphQLNonNull(GraphQLString) },
@@ -27,7 +28,7 @@ export class CreateCarPostMutation extends AbstractMutation implements IGraphQLM
     args: CreateCarPostArguments,
     context: Context<CreateCarPostArguments>,
   ): Promise<models.carPost.Attributes> {
-    const post = await CarPostService.create({ ...args, owner: '5aa82be36fa1068002d0fe33' });
+    const post = await CarPostService.create({ ...args, owner: context.user.id });
     return post.toJson();
   }
 }
