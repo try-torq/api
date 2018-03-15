@@ -7,6 +7,7 @@ import { Schema } from '../schemas';
 import { RootValue } from '../RootValue';
 import { Context } from '../context';
 import { UserService } from '../services';
+import { RoutesProvider } from './RoutesProvider';
 
 export class GraphQLRoutes {
   public static mount(app: express.Application): void {

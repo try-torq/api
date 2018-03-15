@@ -11,6 +11,8 @@ export interface INewCarModelBuffer {
 }
 
 export class CarModelService {
+  private static log = Logger('app:services:CarModelService');
+
   public static async findAll(): Promise<CarModel[]> {
     const documents = await CarModelModel.find();
     return documents.map(document => new CarModel(document))
@@ -41,10 +43,11 @@ export class CarModelService {
   }
 
   public static async findByCarMakeAndName(makeName: string, name: string): Promise<CarModel> {
+    this.log.debug(`makeName => ${makeName}; name => ${name}`);
     const { id } = await CarMakeService.findByName(makeName);
-    const document = await CarModelModel.findOne({ make: id, name })
-    if (!document)
-      throw new NotFoundException('CarModel');
+    this.log.info(`car make id => ${id}`);
+    const document = await CarModelModel.findOne({ make: id, name });
+    console.log(`car document => ${document}`);
     return new CarModel(document);
   }
 

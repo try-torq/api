@@ -14,4 +14,4 @@ export const authMiddleware = (
 
   (request as any).user = payload;
   next();
-}
+};
