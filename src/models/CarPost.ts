@@ -25,6 +25,14 @@ const CarPostSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'CarModel',
   },
+  primaryPictureIndex: {
+    type: Number,
+    default: 0,
+  },
+  pictureUrls: [{
+    type: String,
+    trim: true,
+  }],
   tags: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'CarTag',
@@ -74,6 +82,8 @@ export interface ICarPostDocument extends mongoose.Document {
   nickname: string;
   owner: string;
   carModel: string;
+  pictureUrls: string[];
+  primaryPictureIndex: number;
   tags: string[];
   year: number;
   saleStatus: string;
@@ -109,6 +119,14 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
 
   public get saleStatus(): string {
     return this._document.saleStatus;
+  }
+
+  public get pictureUrls(): string[] {
+    return this._document.pictureUrls;
+  }
+
+  public get primaryPictureIndex(): number {
+    return this._document.primaryPictureIndex;
   }
 
   public get isForSale(): boolean {
@@ -157,6 +175,8 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
       price,
       publishedAt,
       editedAt,
+      primaryPictureIndex,
+      pictureUrls,
       tags,
       year
     } = this;
@@ -167,6 +187,8 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
       owner,
       carModel,
       saleStatus,
+      pictureUrls,
+      primaryPictureIndex,
       price,
       publishedAt,
       editedAt,

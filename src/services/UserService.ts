@@ -9,6 +9,7 @@ export interface INewUserBuffer {
   username: string;
   password: string;
   email: string;
+  avatarUrl?: string;
   role?: string;
 }
 
@@ -62,6 +63,7 @@ export class UserService {
       password,
       email,
       role,
+      avatarUrl,
     } = buffer;
 
     const { salt, hash } = await User.generateSaltAndHash(password);
@@ -72,6 +74,7 @@ export class UserService {
       email,
       salt,
       hash,
+      avatarUrl,
       role: role || 'user'
     });
 

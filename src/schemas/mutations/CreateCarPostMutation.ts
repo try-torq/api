@@ -20,6 +20,8 @@ export class CreateCarPostMutation extends AbstractMutation implements IGraphQLM
     tags: { type: new GraphQLList(GraphQLString) },
     year: { type: new GraphQLNonNull(GraphQLInt) },
     saleStatus: { type: new GraphQLNonNull(SaleStatusType) },
+    pictureUrls: { type: new GraphQLList(GraphQLString) },
+    primaryPictureIndex: { type: GraphQLInt },
     price: { type: GraphQLFloat },
   }
 
@@ -29,6 +31,7 @@ export class CreateCarPostMutation extends AbstractMutation implements IGraphQLM
     context: Context<CreateCarPostArguments>,
   ): Promise<models.carPost.Attributes> {
     const post = await CarPostService.create({ ...args, owner: context.user.id });
+    console.log(post.toJson())
     return post.toJson();
   }
 }

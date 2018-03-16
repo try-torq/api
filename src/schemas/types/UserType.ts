@@ -8,8 +8,9 @@ import {
   RoleField,
   UsernameField,
   JoinedAtField,
+  AvatarUrlField,
+  CarPostsField,
 } from '../fields';
-import { CarPostsField } from '../fields/CarPostsField';
 
 export const UserType = new GraphQLObjectType({
   name: 'User',
@@ -23,5 +24,6 @@ export const UserType = new GraphQLObjectType({
     role: new RoleField(),
     joinedAt: new JoinedAtField(),
     cars: new CarPostsField(),
+    avatarUrl: new AvatarUrlField()
   })
 });
