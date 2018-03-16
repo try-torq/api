@@ -27,7 +27,8 @@ export class Database {
   }
 
   public static async init(): Promise<mongoose.Mongoose> {
-    const conn = await mongoose.connect(Environment.config.database.uri);
+    const { uri, username, password } = Environment.config.database;
+    const conn = await mongoose.connect(uri, { user: username, pass: password });
 
     mongoose.connection.on('connect', () => this.onConnect());
     mongoose.connection.on('disconnect', () => this.onDisconnect());

@@ -2,3 +2,6 @@ node_modules
 gcloud-service-acc.json
 dist
 .env
+yarn-error.log
+yarn-debug.log
+now.json

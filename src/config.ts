@@ -53,6 +53,8 @@ export const config = <config.Environemnts>{
   production: {
     database:{
       uri: process.env.MONGODB_ATLAS_CLUSTER_URI,
+      username: process.env.MONGODB_ATLAS_CLUSTER_USER,
+      password: process.env.MONGODB_ATLAS_CLUSTER_PASS,
     },
     server: {
       host: process.env.HOST || 'torq-app.herokuapp.com',
