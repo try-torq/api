@@ -7,7 +7,7 @@
     "install:types": "./node_modules/.bin/at-types i",
     "install:dev": "yarn && yarn install:types",
     "install:clean": "yarn prune && ./node_modules/.bin/typings prune",
-    "db:seed": "./node_modules/.bin/ts-node src/database/seed",
+    "db:seed": "node dist/database/seed",
     "build": "./node_modules/.bin/gulp build",
     "start": "./node_modules/.bin/cross-env NODE_ENV=production node dist/main",
     "dev": "./node_modules/.bin/nodemon --watch './src/*/**.ts' --exec \"./node_modules/.bin/ts-node src/main\"",

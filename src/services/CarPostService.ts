@@ -14,6 +14,8 @@ export interface INewCarPostBuffer {
   year: number;
   saleStatus: string;
   price?: number;
+  pictureUrls?: string[];
+  primaryPictureIndex?: number;
 }
 
 export class CarPostService {
@@ -61,7 +63,9 @@ export class CarPostService {
       tags,
       year,
       saleStatus,
-      price
+      price,
+      pictureUrls,
+      primaryPictureIndex
     } = buffer;
 
     const { id } = await CarModelService.findByCarMakeAndName(carMakeName, carModelName);
@@ -74,7 +78,9 @@ export class CarPostService {
       tags: $tags.map(tag => tag.id),
       year,
       saleStatus,
-      price
+      price,
+      pictureUrls,
+      primaryPictureIndex
     })
 
     return new CarPost(document);

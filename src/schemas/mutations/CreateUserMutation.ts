@@ -14,6 +14,7 @@ export interface CreateUserArguments {
   username: string;
   email: string;
   password: string;
+  avatarUrl?: string;
 }
 
 export class CreateUserMutation extends AbstractMutation implements IGraphQLMutation {
@@ -24,6 +25,7 @@ export class CreateUserMutation extends AbstractMutation implements IGraphQLMuta
     username: { type: new GraphQLNonNull(GraphQLString) },
     email: { type: new GraphQLNonNull(GraphQLString) },
     password: { type: new GraphQLNonNull(GraphQLString) },
+    avatarUrl: { type: GraphQLString },
   };
 
   public async execute(

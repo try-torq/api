@@ -41,6 +41,10 @@ export const UserSchema = new mongoose.Schema({
     max: 255,
     validate: validateEmail,
   },
+  avatarUrl: {
+    type: String,
+    trim: true,
+  },
   role: {
     type: String,
     default: 'user',
@@ -69,6 +73,7 @@ export interface IUserDocument extends mongoose.Document {
   firstname: string;
   lastname: string;
   username: string;
+  avatarUrl: string;
   email: string;
   salt: string;
   hash: string;
@@ -86,6 +91,7 @@ export interface IUserAttributes {
   firstname?: string;
   lastname?: string;
   username?: string;
+  avatarUrl?: string;
   email?: string;
   salt?: string;
   hash?: string;
@@ -146,6 +152,10 @@ export class User extends AbstractModel<IUserDocument> {
 
   public get email(): string {
     return this._document.email;
+  }
+
+  public get avatarUrl(): string {
+    return this._document.avatarUrl;
   }
 
   private get salt(): string {
@@ -215,6 +225,7 @@ export class User extends AbstractModel<IUserDocument> {
       firstname,
       lastname,
       username,
+      avatarUrl,
       email,
       salt,
       hash,
@@ -228,6 +239,7 @@ export class User extends AbstractModel<IUserDocument> {
       firstname,
       lastname,
       username,
+      avatarUrl,
       email,
       salt,
       hash,

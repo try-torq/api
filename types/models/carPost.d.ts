@@ -7,6 +7,8 @@ declare module models {
       saleStatus?: string;
       publishedAt?: Date;
       editedAt?: Date;
+      primaryPictureIndex?: number;
+      pictureUrls?: string[];
       price?: number;
       owner?: string;
       carModel?: string;

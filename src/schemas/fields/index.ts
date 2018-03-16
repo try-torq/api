@@ -20,3 +20,7 @@ export * from './TagsField';
 export * from './CarPostsField';
 export * from './TokenField';
 export * from './UserField';
+export * from './AvatarUrlField';
+export * from './PrimaryPictureIndexField';
+export * from './PictureUrlsField';
+export * from './CarPostsField';

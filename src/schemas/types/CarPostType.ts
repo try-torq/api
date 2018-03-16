@@ -8,6 +8,8 @@ import {
   OwnerField,
   CarModelField,
   TagsField,
+  PictureUrlsField,
+  PrimaryPictureIndexField,
 } from '../fields';
 
 export const CarPostType = new GraphQLObjectType({
@@ -21,5 +23,7 @@ export const CarPostType = new GraphQLObjectType({
     tags: new TagsField(),
     year: new YearField(),
     saleStatus: new SaleStatusField(),
+    pictureUrls: new PictureUrlsField(),
+    primaryPictureIndex: new PrimaryPictureIndexField(),
   })
 });
