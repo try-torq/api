@@ -14,6 +14,8 @@ declare module config {
 
   interface DatabaseConfiguration {
     uri: string;
+    username?: string;
+    password?: string;
   }
 
   interface ServerConfiguration {
