@@ -9,6 +9,7 @@
     "install:clean": "yarn prune && ./node_modules/.bin/typings prune",
     "db:seed": "node dist/database/seed",
     "build": "./node_modules/.bin/gulp build",
+    "prestart": "yarn build",
     "start": "./node_modules/.bin/cross-env NODE_ENV=production node dist/main",
     "dev": "./node_modules/.bin/nodemon --watch './src/*/**.ts' --exec \"./node_modules/.bin/ts-node src/main\"",
     "clean": "./node_modules/.bin/gulp clean",
