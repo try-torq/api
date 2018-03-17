@@ -4,9 +4,10 @@ import { RootValue } from '../../RootValue';
 import { Logger } from '../../core';
 import { Context } from '../../context';
 import { ValidationException } from '../../exceptions';
-import { UserType } from '../types';
+import { AuthenticationBufferType } from '../types';
 import { AbstractMutation, IGraphQLMutation } from './AbstractMutation';
 import { UserService } from '../../services';
+import { IUserAuthenticationBuffer } from '../../models';
 
 export interface CreateUserArguments {
   firstname: string;
@@ -18,7 +19,7 @@ export interface CreateUserArguments {
 }
 
 export class CreateUserMutation extends AbstractMutation implements IGraphQLMutation {
-  public type = UserType;
+  public type = AuthenticationBufferType;
   public args = {
     firstname: { type: new GraphQLNonNull(GraphQLString) },
     lastname: { type: new GraphQLNonNull(GraphQLString) },
@@ -32,8 +33,11 @@ export class CreateUserMutation extends AbstractMutation implements IGraphQLMuta
     root: RootValue,
     args: CreateUserArguments,
     context: Context<CreateUserArguments>
-  ): Promise<models.user.Attributes> {
+  ): Promise<IUserAuthenticationBuffer> {
     const user = await UserService.create(args);
-    return user.toJson();
+    return {
+      user: user.toJson(),
+      token: user.genToken()
+    };
   }
 }
