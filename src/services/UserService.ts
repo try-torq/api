@@ -55,6 +55,15 @@ export class UserService {
     return new User(document);
   }
 
+  public static async authenticateWithEmail(email: string, password: string): Promise<IUserAuthenticationBuffer> {
+    const user = await this.findByEmail(email);
+    const isMatch = await user.checkPassword(password);
+    if (!isMatch)
+      throw new UnauthorizedException('invalid email or password');
+    const token = await user.genToken();
+    return { user: user.toJson(), token }
+  }
+
   public static async create(buffer: INewUserBuffer): Promise<User> {
     const {
       firstname,
