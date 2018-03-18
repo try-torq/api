@@ -10,6 +10,7 @@ export interface INewCarPostBuffer {
   owner: string;
   carModelName: string;
   carMakeName: string;
+  body?: string;
   tags?: string[];
   year: number;
   saleStatus: string;
