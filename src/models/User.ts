@@ -61,7 +61,7 @@ export const UserSchema = new mongoose.Schema({
   carPosts: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'CarPost'
-  }
+  },
 }, {
   timestamps: {
     createdAt: 'joinedAt'

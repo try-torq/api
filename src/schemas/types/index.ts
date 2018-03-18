@@ -7,4 +7,6 @@ export * from './SaleStatusType';
 export * from './TagType';
 export * from './CarPostType';
 export * from './AuthenticationBufferType';
-
+export * from './CarPostCommentType';
+export * from './CarPostFavoriteType';
+export * from './CarPostPinType';

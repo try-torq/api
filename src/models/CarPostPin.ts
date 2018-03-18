@@ -4,7 +4,7 @@ import * as uniqueValidator from 'mongoose-unique-validator';
 import { AbstractModel } from './AbstractModel';
 
 export const CarPostPinSchema = new mongoose.Schema({
-  carPost: { type: mongoose.Schema.Types.ObjectId, ref: 'CarPost' },
+  post: { type: mongoose.Schema.Types.ObjectId, ref: 'CarPost' },
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 }, {
   timestamps: {
@@ -19,19 +19,19 @@ CarPostPinSchema.index(
 
 export interface ICarPostPinDocument extends mongoose.Document {
   _id: string;
-  carPost: string;
+  post: string;
   user: string;
   pinnedAt: Date;
 }
 
 CarPostPinSchema.plugin(uniqueValidator);
 
-export const CarPostFavoriteSchemaModel =
+export const CarPostPinModel =
   mongoose.model<ICarPostPinDocument>('CarPostPin', CarPostPinSchema);
 
-export class CarPostFavorite extends AbstractModel<ICarPostPinDocument> {
-  public get carPost(): string {
-    return this._document.carPost;
+export class CarPostPin extends AbstractModel<ICarPostPinDocument> {
+  public get post(): string {
+    return this._document.post;
   }
 
   public get user(): string {
@@ -43,7 +43,7 @@ export class CarPostFavorite extends AbstractModel<ICarPostPinDocument> {
   }
 
   public toJson(): models.carPostPin.Attributes {
-    const { id, carPost, user, pinnedAt } = this;
-    return { id, carPost, user, pinnedAt };
+    const { id, post, user, pinnedAt } = this;
+    return { id, post, user, pinnedAt };
   }
 }

@@ -5,4 +5,6 @@ export * from './CarPost';
 export * from './CarTag';
 export * from './AbstractModel';
 export * from './CarPostFavorite';
+export * from './CarPostComment';
+export * from './CarPostPin';
 

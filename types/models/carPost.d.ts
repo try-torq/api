@@ -13,6 +13,10 @@ declare module models {
       owner?: string;
       carModel?: string;
       tags?: string[];
+      body?: string;
+      comments?: string[];
+      favorites?: string[];
+      pins?: string[];
     }
   }
 }
