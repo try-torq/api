@@ -5,8 +5,8 @@ import {
   UserField,
   BodyField,
   CarPostField,
+  CommenterField
 } from '../fields';
-import { CommenterField } from '../fields/CommenterField';
 
 export const CarPostCommentType = new GraphQLObjectType({
   name: 'CarPostComment',
