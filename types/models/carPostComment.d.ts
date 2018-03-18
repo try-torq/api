@@ -1,10 +1,10 @@
 declare module models {
-  namespace carPostPin {
+  namespace carPostComment {
     interface Attributes {
       id?: string;
-      user?: string;
+      body?: string;
+      commenter?: string;
       post?: string;
-      pinnedAt?: Date;
     }
   }
 }

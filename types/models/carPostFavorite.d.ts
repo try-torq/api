@@ -3,7 +3,7 @@ declare module models {
     interface Attributes {
       id?: string;
       user?: string;
-      carPost?: string;
+      post?: string;
       favoritedAt?: Date;
     }
   }

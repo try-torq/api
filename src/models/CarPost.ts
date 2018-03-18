@@ -37,6 +37,22 @@ const CarPostSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'CarTag',
   }],
+  body: {
+    type: String,
+    trim: true,
+  },
+  comments: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'CarPostComment',
+  }],
+  favorites: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'CarPostFavorite',
+  }],
+  pins: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'CarPostPin',
+  }],
   year: {
     type: Number,
     required: true,
@@ -87,6 +103,10 @@ export interface ICarPostDocument extends mongoose.Document {
   tags: string[];
   year: number;
   saleStatus: string;
+  body?: string;
+  comments?: string[];
+  favorites?: string[];
+  pins?: string[];
   price?: number;
   publishedAt: Date;
   editedAt?: Date;
@@ -97,12 +117,25 @@ CarPostSchema.plugin(uniqueValidator);
 export const CarPostModel = mongoose.model<ICarPostDocument>('CarPost', CarPostSchema);
 
 export class CarPost extends AbstractModel<ICarPostDocument> {
-  public get id(): string {
-    return this._document.id;
-  }
 
   public get nickname(): string {
     return this._document.nickname;
+  }
+
+  public get body(): string {
+    return this._document.body;
+  }
+
+  public get comments(): string[] {
+    return this._document.comments;
+  }
+
+  public get favorites(): string[] {
+    return this._document.favorites;
+  }
+
+  public get pins(): string[] {
+    return this._document.pins;
   }
 
   public get owner(): string {
@@ -178,7 +211,11 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
       primaryPictureIndex,
       pictureUrls,
       tags,
-      year
+      year,
+      body,
+      comments,
+      favorites,
+      pins,
     } = this;
 
     return {
@@ -193,7 +230,11 @@ export class CarPost extends AbstractModel<ICarPostDocument> {
       publishedAt,
       editedAt,
       tags,
-      year
+      year,
+      body,
+      comments,
+      favorites,
+      pins
     };
   }
 }

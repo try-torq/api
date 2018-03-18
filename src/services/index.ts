@@ -4,3 +4,6 @@ export * from './TagService';
 export * from './CarModelService';
 export * from './CarPostService';
 export * from './ImageUploadService';
+export * from './CarPostCommentService';
+export * from './CarPostPinService';
+export * from './CarPostFavoriteService';

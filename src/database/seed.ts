@@ -9,10 +9,16 @@ import {
   CarMakeService,
   UserService,
   CarPostService,
+  CarPostCommentService,
+  CarPostPinService,
+  CarPostFavoriteService,
   INewCarMakeBuffer,
   INewCarModelBuffer,
   INewUserBuffer,
   INewCarPostBuffer,
+  INewCarPostCommentBuffer,
+  INewCarPostFavoriteBuffer,
+  INewCarPostPinBuffer,
 } from '../services';
 
 type StrMap = Map<string, string>;
@@ -419,16 +425,58 @@ const getCarPosts = () =>
     primaryPictureIndex: arr[10],
   })) as INewCarPostBuffer[];
 
+// favorites format:
+// post: string;
+// user: string;
+
+const getFavorites = () => 
+  [
+    [carPostIdMap.get('vanquish'), userIdMap.get('elon')],
+    [carPostIdMap.get('vanquish'), userIdMap.get('geohotz')],
+    [carPostIdMap.get('vanquish'), userIdMap.get('jamal')],
+    [carPostIdMap.get('vanquish'), userIdMap.get('paul')],
+    [carPostIdMap.get('vanquish'), userIdMap.get('emmanual')],
+  ].map(arr => ({
+    post: arr[0],
+    user: arr[1],
+  })) as INewCarPostFavoriteBuffer[];
+
+
+// pins format:
+// post: string;
+// user: string;
+
+const getPins = () => 
+  [
+    [carPostIdMap.get('vanquish'), userIdMap.get('elon')],
+    [carPostIdMap.get('vanquish'), userIdMap.get('geohotz')],
+  ].map(arr => ({
+    post: arr[0],
+    user: arr[1],
+  })) as INewCarPostPinBuffer[];
+
 // comments format:
 // post: string;
 // commenter: string;
 // body: string;
 
-// need to implement service for this
 const getComments = () =>
   [
-
-  ];
+    [
+      carPostIdMap.get('vanquish'),
+      userIdMap.get('elon'),
+      'Cool @charles, but you should\'ve bought a Tesla instead. I thought we were tight ):',
+    ],
+    [
+      carPostIdMap.get('vanquish'),
+      userIdMap.get('geohotz'),
+      'Nah dude, just buy an acura and slap a comma ai pilot on there, it\'s only $300!'
+    ]
+  ].map(arr => ({
+    post: arr[0],
+    commenter: arr[1],
+    body: arr[2],
+  })) as INewCarPostCommentBuffer[];
 
 (async () => {
   console.log('[*] connecting to db...');
@@ -466,6 +514,21 @@ const getComments = () =>
     console.log('[+] adding post =>', post);
     const { id } = await CarPostService.create(post);
     carPostIdMap.set(post.nickname, id);
+  }
+
+  for (const pin of getPins()) {
+    console.log('[+] adding pin =>', pin);
+    await CarPostPinService.create(pin);
+  }
+
+  for (const favorite of getFavorites()) {
+    console.log('[+] adding favorite', favorite);
+    await CarPostFavoriteService.create(favorite)
+  }
+
+  for (const comment of getComments()) {
+    console.log('[+] adding comment =>', comment);
+    await CarPostCommentService.create(comment);
   }
 
   process.exit(0);

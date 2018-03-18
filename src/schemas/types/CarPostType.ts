@@ -10,6 +10,10 @@ import {
   TagsField,
   PictureUrlsField,
   PrimaryPictureIndexField,
+  BodyField,
+  FavoritesField,
+  CommentsField,
+  PinsField,
 } from '../fields';
 
 export const CarPostType = new GraphQLObjectType({
@@ -25,5 +29,9 @@ export const CarPostType = new GraphQLObjectType({
     saleStatus: new SaleStatusField(),
     pictureUrls: new PictureUrlsField(),
     primaryPictureIndex: new PrimaryPictureIndexField(),
+    body: new BodyField(),
+    favorites: new FavoritesField(),
+    comments: new CommentsField(),
+    pins: new PinsField(),
   })
 });
