@@ -654,6 +654,235 @@ const getCarPosts = () =>
         "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fsuz2.jpg_1521484585204?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=z1pf9J7VedKCCsjnEGPnbGjsSsz5Rkz8MfDMcWcyHjOnkWUeMp7b%2F%2BPRy4NGo%2BJ8887NNp54nRXRZsCkXn0a9wlc1bK0S09vMPHamMVwEVR%2BrESEISXv5VjgalHSeNsBUY4lCtS%2FMGZtmme07SNGCeQmgTFETUGaGtrumetnkDdJJCYth%2FkWpCVLGsLhX3QUP8J%2BjgXzXvsD2JfuW77GKpOgRzSzOTSuJwyKZAoUjXBXUzyoVoqNfZLk%2FNK7HxBI%2BXGSKBe6s6snOOcXsziGL4FprgPXCeAcFTpqg6sDSB96yHVc9eXqcAuXL5pv96Lc3EkL0myWyw0TWdnj%2F2PimQ%3D%3D"
       ],
       0
+    ],
+    [
+      'dart dart dart dart dart',
+      userIdMap.get('charles'),
+      'Dart',
+      'Dodge',
+      "Not your father's Dodge Dart.",
+      ['eco-smart', 'maintainable', 'new school'],
+      2015,
+      'forSale',
+      2800000,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fdd1.jpg_1521489403748?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=1F3NdFBPUvVxnwOasyyHqGaSt4%2BngQzcfk%2Bx4TS8YKjnDTV2BUAHUTuBZdvdS0O25g0eJECjwft4%2BuK74wcxzKOVKabmlk1TseHs42S36eUYOpxfvr9UY4r%2BjsFv8qP56h2Ev5j2O56dQvagRUJnu%2Fvhz8qUbXpEB7P%2FWBDmwjatmQaxm76IJoLLDy%2FHNQ4Woax0wuymRIPBxLoSwycPTlrzhHvnlo5uOAH6ckuLp10Y09N%2BgAIo57iSAN6IQnxJb%2BhopqGDSfVEuQzBr%2BRpmEO7JbqQEw28ldOkgszrrroJDvM1jJoHUCU9Z%2BVZM7r6hJ8WLoiR7%2FG%2FHFFJ6XfT0A%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fdd2.jpg_1521489412123?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=aiV6Yz7bldcQ16jVOJ0E4NUrN1irZ71V2NoUT2nE7Z2J4lB0duHl18yKxtCI9lyizJfGBb5ZD7XR4mFfyr6gWdhXBQkMCRQv3NVIdMDvs%2FGDdmmfN11IHuN8uDodmW%2FP%2FQ6fl8G0DLOIYoju4iVAxenby7UIl65arEbjnB9kdSEZgT4U00bslip%2BqllY1%2FU15p0ZxB%2BdD1wA%2B4qMh%2BLLpsGI0hPZJOvJG3kj9tVJtdOcmendrH4TMPqcX8RGAyEpRcRWEAJa8SeAaITS6qRIEfIQujt8Eb61MoxBKmSBs9GS9dp1MgnelvU2uLKFATIMFepwWdDRECylRYVkcbuDKA%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fdd3.jpg_1521489424030?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=JytC0TRtiOlBwfbHlP2nJGkIA%2FXfSq%2FNHgy1p0u0%2B9OfxPVtTyg81h560Ug27bmDexCNhpSTxZlvdDTiGjl7RqlkmvBGzyjZ1eU2PpAev5bJ1B2xTWuh9avakOHRasVj%2BzHiZndH2Wq2%2BVIm9l7fw0LtKa241U2vdVqNZXbZjHjo438fiarwBMx9R%2BemlAVNUKb%2BW%2FFGrBgiDVTowXPYdvharQ7AnAQvnNO4pMJUltdiTw%2B9BSdlMANDeu9SXK4lfm9rIffoLbKUa1EURe6NOv8xaOwE9WPusjLgOAkKICnC9UTxj6ZHldQpRNsLvTcTiFOaRTcimbFu5at0ZUrD4A%3D%3D"
+      ],
+      0
+    ],
+    [
+      'classic american pickup truck',
+      userIdMap.get('paul'),
+      'F-150',
+      'Ford',
+      "Great pick-up for a great price. Recently upgraded, no longer need this vehicle.",
+      ['reliable', 'original parts', 'pickup', 'lariat'],
+      `1999`,
+      'forSale',
+      990000,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fff1.jpg_1521489452675?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=IPc9JaP%2BJiy7qv0rl8Sd4ppwFv%2BbjVkoo7%2BzPnFQ2vZ5P%2FejWucmUcYgA%2Bgh6UsdS7bLOa6h6pSV06Jj0tm3o4HLnPwlPbbSFvByZxLt1acu077n%2F1Z771wY0LjIvIIzn9jFMbQkssXWpfzhNReXOyKEWC4MSEKP1Q7CnkB6oERqU%2FkeGAX59QOPDn6gIvGqAY1a9d6XWljxuUSni1%2FosQvrnFS5cQPj5XkKdDnqlTv585r1eBILQdS7Na5b7inPnAdRCXODlfy6X6sSnVOSE0R0lLokytUZ%2BobUUuhsvOOaE4cvmqt%2BFwQMYfPpUxhIZgRx7yC4uw6hFUYCYxZ2Mg%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fff2.jpg_1521489461663?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=hHYIvB%2F6TfFhpjDsoma70U%2BR%2BI8yeKCD5QTnzuPEc9hVQwhvfHQ9STFZG%2BzwGV65TNF672BxhbZRASFtEIdNhr5ieUAhWoKFQaBa6hWxoZ69B6KQtVz1uBOumLbhD4xMPjFGfZq%2Fjj1wM3TrAk13JY%2FJp21lL1zXx91Byhf5nKbEUmLvucF6ioX8tF6cP2NG3TCbFPgkEDOrmGUG0beFbd3eBPuqiRLg0kS1ocrLMsPxRIet05CjxEQ4Vy6UPA8eL7JucdSB6JwoDJZFQuREUeXssi3LiG533eCD71rTtdo2hlWSEssqzL%2BWL3szAgN9gGt8VxhdE6GSyWVAD6dfQA%3D%3D"
+      ],
+      0
+    ],
+    [
+      'tryna catch me riding dirty',
+      userIdMap.get('bjarnepp'),
+      'Escalade',
+      'Cadillac',
+      "THEY SEE ME ROLLIN', THEY HATIN'",
+      ['caddy', 'customizable', 'big'],
+      2002,
+      'forSale',
+      1250000,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fce1.jpeg_1521489487340?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=YqqGoFv0xGakj7WqB61RSeZVS19gn4CAWSz6oeC7PiQWxwS6XpdXr8RrC1Fp1DeiPMp5OX%2FQCy0z0ytvQPPAvjB12WyJWMktfAIDUZW814SjGHHJPM5N8n85MXP6%2BPrQ5SVbAB%2BOSbFKkbbSmcUx3bzgvIHzNzhc35LjXtEW1n8AR86iUc5o6muXAIFU5kx%2BYLbcrRBJYUpeuGy%2FtfBX0%2FVMnqd%2B9nkB962snOCvJKGDOT8de0D9LCAnKS%2BJjkjj2fTsQS5oZ2vjfJl8%2FdauU%2BC3PYiFsoC%2B8Sm3l8i8%2Bv2L1CMMGEB0Lb2UtNgtMaKvJNDINU57Dt6DmkoMSPi8PA%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fce2.jpg_1521489496278?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=oJBmu5n5XiVtOsd58mwvE8ih3PnQL4kaCh1X3ZskJwO05vYVXnOunVtKLDqxgccKEYfXOSQgsqYdeH420GDzD2PeHaq0A6baapnCJLed9titKALgKJkXUbg7q2fPGwILlL9uPOAIHI3kM4yCvcks8%2FD1A81lk2gyPpQUn08HfCAsssP19qLHWWsSVFyHpPKV9fAz2yVZFI6jQNjtwdzdQTJ6llFT0Z3NwjTmW5teIv9vH7KhNWkXRtj85vksLjykBItHVlmj6ltn%2BZH90o1%2BTKRn8BBXV6%2B380k4LwGPFL74%2BYPvWk6PxCb8Ej9YwVXk1UzCD0P3WEXT771zCYG%2FWQ%3D%3D"
+      ],
+      0
+    ],
+    [
+      'I also like to live dangerously.',
+      userIdMap.get('clattner'),
+      'Cooper',
+      'Mini',
+      "Austin Powers would approve.",
+      ['british', 'classic', 'racing stripes'],
+      1970,
+      'forSale',
+      4250000,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fmc1.jpg_1521489621628?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=KAa088Zt920A73QwGMlaGmp8Zwed5H3EWfCNp3U%2B4Hdu4pNZR5sQnXVpaoFhtnMfnVd%2BmwuQ4fVs0EwyuihwGzkGA2Bqu3vt%2BIU%2FZJtaVNn5yBzny%2FbxEx4xqZ88h7uIrFv5Xv0QnfMLuiVj0OgUitX9m1fUcPbEcrPjMI%2FqaaMjfTKqQNt%2FkGWpZaHEnkBbpH%2Bozb6snoTUh4PwB7DZEzsqjOPkRWvZqbiEi0MBe5UgAflceP8YW%2BfcbcsaBkgczMWgEK%2FmHKWRy2Jq4qAerj%2BsbOlWNETlAw0cnY7WvqFO5tf4GPqspVecb%2FXeASkTOUZCLPeF%2BbFnURABdG%2FK9Q%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fmc2.jpg_1521489629509?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=0TDmxmB%2BW%2BaLbP%2FqZZBur%2BRkaRM5KIUSBvtsQ0VKKVn7uEIlR6xNgfvqAQ5vN7C1Sx9Z4XjAiRB5eqhgzfNm12OZc7lSWfwFMDiYmSJTvfX%2BwNzBYHeiAxrbNxdMU50G%2BLE5UaqPck30sHcxCQtQ4WYhpyLnFORbqloThusxDp8tZrwRPeZPDYWNQY6ueeBADt%2FyWcTyCZKvR6oZkcCFF7NJ4crni%2F6ccuHrdXo%2BXAtqCu0xLi1%2BC66msCYPLWnb8Xl36MOm15EOTMl6CaJO%2BrhhW9eVwjTnhzhHcfOhDbgrtx9KrhjnbQalfRvUeA5XCrXsijJ%2Fd4VD%2Bjn2%2FNcwOQ%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fmc3.jpg_1521489643602?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=Ea82WsvymZ7KYLKyizDGGgWU1HiKTHJJMxp4ax7icpvDsEe8VjGNMoO8z9KrdTpJ6aEp6lDw3ExAhMtNoA7gR7N0O0OOr9B0jJ15h1eZMLLRH%2BRiYdasO5XIJpReGSwCEEvAX9cOlOom0WDxkfvykVEDxsBBgHlAgzjPPv9XIGMSSC%2BhbxFm4WaWQxY4%2FqT8jzr%2B1QsB9zSnaHIsmzcSoWjeNBXxNDZwoviAES4Na4p0LvhSV6ulir4FLsC5LzJ53yJsCYUxaBwFXatglZqkCFx5jrDs6UBk7mgf414xaPEi7DzQiiTiDj8vMTzFzFsWcpWiKS6OzWuZCwXRtcaHhg%3D%3D"
+      ],
+      0
+    ],
+    [
+      'classic lotus',
+      userIdMap.get('hobert'),
+      'Elise',
+      'Lotus',
+      "If you played Need for Speed Hot Pursuit 2 back in the PS2 days - you know you want to buy this car.",
+      ['hot pursuit', 'lotuslife', 'pickup', 'luxury', 'turbo'],
+      1998,
+      'forSale',
+      4400000,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fle1.jpg_1521489759389?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=pGsVfNgyhA3hKIpp4an3vJljN%2F6yWAlMJA4nisxRpBybQUTrm%2Fj5ceH%2Fr0uqDruZNkMiGdqu18bqIa0ivZp8PkeOhkUZyTYh0VPGSKeswtp1Sap7cg%2F17SBsaj6WN15WhXfnwlj%2BFuMDC72Hv9vc%2BJhGv6DIEsWKyI5or3Pp7oHE4hLzNFdg1AY3HVA%2FrvdqKDnXlxZtsMF8qOPxDWRm7XngD4LpaXcqbhLXBXWRH9LFU%2F1acKcC5AP1J%2FU3Px478aUTs6IWt29QViyCwhzw6f5q8ND1eo8cKC1GP9A7aOL%2Bn9d9ETTpjS6IWkqqEVgWRb23NtOgCpaQy8YX1dObTQ%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fle2.jpg_1521489767175?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=YwRtpNYD7WxxnA%2BQklYTGfpRc2cA%2BVFmuBJGPw5SkVV3dLPp%2BpGAQkLmPSx%2F5g2ov%2BXh2E1KMjrdpLWTPwphHrNZgsqgVzeQ2Fi1gRE8ZZT08ANaDBj2lGZ6eNJjJuT8d9So5ZOd6%2Fj675txKrBb%2F5D58PQMDNPEN49c1OXd8pSeQVyYLKmr54tWcfH2bWa%2Bkbjk74NhotA6f7kihK%2F4uJuNCyAxd0UICF0jJ%2F46R0QsFHp6TvGYiiOlvZeliNfu6cuoPBqwiHcNW5%2BzKs96ihHXN8MdveV0xi%2B54vGWz%2B7F6ovM0VQ5tojiMgQQS8kmQwPKthZ2twDFjxLGD3ndbA%3D%3D"
+      ],
+      0
+    ],
+    [
+      'aspirations',
+      userIdMap.get('elon'),
+      'Trooper',
+      'Isuzu',
+      "I had the idea for The Boring Co while I owned this car. Buy it and your dreams may or may not come true.",
+      ['v6', 'only 490k miles', 'space', 'elonish', 'musky'],
+      1998,
+      'forSale',
+      330000,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fit1.jpg_1521489902744?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=lP6Cc4SeX5oaV3v7MSsQvxpUKrK8S0AVLdpSYVuCCjEIcp5d0Np2mw5kMHfD%2BfIbE3uHq6uG9uwBai6%2B7z2Y3jdngt7XzYulw6JOo4vgK5M6jITOlEbk6pkHt6sJyk4lNd5VrzlxeeiBp4Z2DUV8hp6neQs%2B%2FW5k88DVDVbc4yk6FNT8VLsT2Q6gv5YaxSx7NkDmdVeGpNMdVzcqRofSybBkjMKU1du1RC503k7I1l0OULr2v8D5rW0MliCO37duCLBbpQaP9Jwu%2F%2Fso3HZtgqzpUmnBATo7OeH1wlcg3W%2BC%2BK9nreYRtGHtNDhMCKy7qPr5yxFNK3JeTFOKtopu4A%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fit3.jpg_1521489918289?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=U%2BjrRc%2BsBx%2BEUHZO6ch1Fw92ukEcYRsd3JTw8U3C37fAE3Fq3xljbOH5guWKGvJ7VzBvdEsgZgpyK8MtOKb9JYilHo2dbk2mLSyCWIZMprr%2FdbSwxnVpeptfRkjk8BCVRvGid1jV82MLJYD0aGPtZAHO8Rr1ew%2BF3IZVQprhOKjd7Av0DEeNi6tpsJq9myvHMTwtZ%2Ba62%2FmD7uh1YlHnjPZpYzH9ll6peWFhOCN9ZuJzqmZBa5bCqU329BjOLP%2BMuOTQDrz7PLOl5ZW17nFLIu1rHRmBNUD7BR%2FDqpUHB1sRQZdVbXNTDOxSxOvxR7GCiOgOVW1Q3K9pHZXVRPPSjg%3D%3D"
+      ],
+      0
+    ],
+    [
+      'i definitely own this',
+      userIdMap.get('charles'),
+      '124 Spider',
+      'Abarth',
+      "Don't ask me if I actually own this because I definitely do. Really.",
+      ['fast', 'mine', 'for real though', 'expensive'],
+      2015,
+      'notForSale',
+      undefined,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fab1.jpg_1521491239609?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=lEdwsE0xODIjwal48oUs9C6trPC36qRTFAgvL3fymMEgjJzUk3SbnPwzLSQWS6XhRaNidn%2FlrtshPGP7WNVF6CmEcPrIidK9n2Px%2FLbNrESLnNIYzHZA1ksyHvEZLMYl0h1BDQ%2B9bcJq1WWvQjdjQTDYCRfcX7aQ9aYmeum3kYcNCNZA%2Fv99%2BqAMrpF7OGHxQzYvaFXBRD1XkomtfEeX7JRoJYrLvbEl5XpoPbf%2FzcXUSVNoofxF21IOUFLK%2Fr8RzKJh7zTZuN83J0UwPV02BoLzNCPO1LPg2dA9ln3Wq3Qkjw5jcduosn1WgXSVqSvwl5zQs4nVZGrp%2BdUNwwWDMA%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fab2.jpg_1521491256457?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=UwgGmOMlXJ%2B6Wv1x%2F%2BEQW5sYJJaft%2FVYxFE%2FL1yncjjw3z5j1sl7hvIRzvEjyaKR5hxXGlhLWcWaNoA5g4m5itfHedTEqYgrUcK4RVfwiPP68A%2B0k6hnVNOfZKCjeMuMSdbPZFVPLEB%2BK%2BpV2GZlI%2Frhw9SGPSBSq38MabPyKm9WzSbfRgXoOKtiEySWE%2FI%2B8%2B06H5k74p0ouOFvJZT%2FL9hFemSTOxTtHYb3%2BtR4RVX6Z6reu8TOm2a6D80ABnriYeQlBpvVC7AmdryqNZYBFz%2Fn5bt%2BfOZLwTdpYnwGKNHg%2FJ47p91luqg5qELQPBqDHV%2FDyTaci6wjyJAyBDWHpQ%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fab3.jpg_1521491268012?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=dN3aLdzcEz0rDPc510vQx9uh7XI8b4wRutMMehnLaPMcygZ%2FOunJwMMQUN3VByy7E%2BkFCxMfiU1B3zmuGSP78pvkZCeuKNLYlClx1%2Fibj4szGWUbTZ5G3yMj1EbTHRbYGxN%2BTSZgo7jQXNaOEs57pV%2FhApv2QfBPDI8ii1n9lKuaVb6vb64yilSzo9z9EuEyEq2sDt4nq5%2BNT%2Bvq3SPeUJa0qR332KveHefVx7YKQFlJC0gP%2BSCK%2BV7InS%2BGNNBLvOCLjiyFCveqxwY3juGg6%2FWUUXZx2yTKrNdgbrdo64gJwL4iwqM8iKf2VhY%2BfdDJXioFSwUtjaJu6DGUpDh5fg%3D%3D"
+      ],
+      0
+    ],
+    [
+      'save the earth!',
+      userIdMap.get('dirtydan'),
+      'Bolt',
+      'Chevrolet',
+      "Electric cars are the future!! Help save the planet! If you don't care about the planet, you'll save A TON on gas fillups.",
+      ['green', 'save turtles', 'save planet', 'boo hummer owners'],
+      2016,
+      'notForSale',
+      undefined,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fcb1.jpg_1521491554838?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=EH4E3Hr7IvHcakLYNvy9Huo2SLo6tzpLUhp9CT8D%2FScnHNO%2BMxhvBhqCOUSrjDFHlcimE0roEaeaVHz%2FgPhbYK24kYpx5%2Fmub8L5C3dABplpYvj7oe2vIgv5t7%2F%2BlrazgU1sLgTFxD94F%2FqevEL%2FszgstnJ1%2BI4PrREDkf27pLhcq6wHNT87Ge0GJfajReTPm8waSt0cwukQMh8NhtSX3x4V7uVVZGyv6243HHpdTI7OhUMQih9G5naathgx2nibMMbLtHIcp%2BpE06ApOXSX%2FC1SJZ54VxrojdOe0m8SipGbRXCD%2BTwVtlShhGTdUJYwkRHIFEq4%2Fcjlgj6M8VppSw%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fcb2.jpg_1521491562067?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=CuagC0hWD6iiXQyYfrDfVp3XNfWXnjJTIXl2A8vorXyITbnoatkFZBEYaSy0zxJSpqwKrU6C4%2FsrzqvZKzV1E%2Bq5slBRUx1EZX%2F6PhTIdSWDY5ZzqKBtpnRZwnoLQs0Wt%2BBUFRkwL8UmY4IyRhsH9zBZtKCoEss9p4p7yl9r3KaFl9EWBheGmy8yophoZbspwQMU64DeqOlkcwIgKOk7YCh90rLKbcH4cT0NDJN9aXZBJYS%2BuyzH85xm5LmcAXbaoMqjDqMaldZqGEHbOnuQ7wIuuGUngIISLHLK4mBR2LCtKl9OReIUyxOwo43QDJT3ZJRLC2DDjyfYMP98DU5tEw%3D%3D"
+      ],
+      0
+    ],
+    [
+      'detroit elegance',
+      userIdMap.get('bjarnepp'),
+      '300M',
+      'Chrysler',
+      "I really like this car. I got it in 2004 and it's lasted for a while. Elegant exterior and interior.",
+      ['detroit', 'america', 'elegant'],
+      2004,
+      'notForSale',
+      undefined,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fc31.JPG_1521491664323?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=F6X3eOdjCb3E5%2FDppaXsb276T1fgxJLsn2nA2LbvXK3Q6TzN42s9Ck7aRAi1ZDW4rQnis8mhcuWqlwlY%2F%2FHD%2B7HfN4EOO83yAgd0kPOPtKJFkMuKhD%2BEEUKJkwquRQxiW4hMxZ7LdKg%2Fq4B02ilouBd3UJrlzRRCXNgj7g6kq748eV1FXrTnBIGM09B0p5xNuQOPjAFtP4XAN3nIX2WDWJdy07%2FFpCAakTr12Q2De%2FIFwf%2B88JXFVAtlDOQbeSYkp%2F7sUuEH0sBh5NzgLCKhYJJXtQpESUL4QD%2BCX%2FMpxJ%2FaowbGt3tY6RNCan8BThhRNaWGoAh%2FvWs1CLVABze8ZA%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fc32.jpg_1521491672753?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=e%2F%2Fq%2FFsAWDiT37QmTUGtTH8fhVsLVWqMtPjd%2BH7KaG3%2BAJdpDCdB8%2BOhLBHPtCg%2BmPf4lM29smhtK0NIkUPFhiAdoXaufLmq6nlByveI%2B%2FxAzcw9T9Vw6648SDTqKc6q6dEd6BQs5B1q6%2BIN4Zjd%2BuB0u1kIm7XBs4VCj0TfzNOOqz4Cp4oHHfJLz88f1iJuTe860HFrZIWy17wN41Omv1bk1B%2FEQIew9b9n2GNuefLeud6zga7zDCR%2FQmBopzwhxV%2Fy%2Bvv5j3qFByO1GoPKb%2F52FAqTIeF0iOL769BSuKcQ8haLOyKrxfwQLPuFGO9kJXjc4Sew5KNqdiNgoGdZzQ%3D%3D"
+      ],
+      0
+    ],
+    [
+      'snowy fiat',
+      userIdMap.get('hobert'),
+      '500',
+      'Fiat',
+      "Couldn't resist capturing a couple photos of my Fiat out in the snow this morning.",
+      ['snowy', 'art', 'vsco'],
+      2018,
+      'notForSale',
+      undefined,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Ff1.jpg_1521491896729?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=giDU8fCKu8gC%2B5oXb52SitdEdytKlBCB6Ot2ej37tzr4ZFBfzyP7UkX0pa5T2iaRR6ALShf3RdVmONSopHRviDQSMpULM%2FK56Lg8hcxIpvdysbmLaXT35vteVEl%2FEi9EmJo8c3y9HAf7eme8xwuU3cTnE0rxytUpVEa84jIF3FYYXV7EBXreG82X3BArjHD7GvKXsURKa0G3VB6VTdcy%2BQJOQTGR%2FbmtI%2B4LG8wCMNGedjZnWzbDR1aHd0Yyg4tx19oNl6h68sS9eK8yuYEdhj3X0Xv8kT03pfkaa1tXzQz1zfn8ArRFsUIS6kDAp9kJ9IVgCMpOS8Xr9H%2Fc%2BoARkg%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Ff2.jpg_1521491904070?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=esXB%2ByB8FT3UDGiFbsq%2BFLJb1OF16lWZRSQ8J0ajMk0amN%2FLPcDipFB29RKV22elxIMap6Wee1J0tKKEfb8RphyRsw4o90z3ph992tWgTTDyXK%2BHq%2BavGekK0IqJdeBTjJ%2BSup7oZhtixYXQgzkNkaEDR%2FaFxbV4AiJUXYyCj4admNRY8kamN6FeTmecVpCmi7wnrhjO7f1OGaMcep9pBpmO2SYEBF%2FZ9XYW5g4vpxk8EA2Qo5FJvUvcfmYmOASrOsCFm2SPK6XNtuS4s22sqfEPJb4DeZ%2Fq8auU2klK%2FaVsZFUj4lin1%2BuOEzDuJW3xW32pTsUos2RPi2LBYRE1QA%3D%3D"
+      ],
+      0
+    ],
+    [
+      'a beast of a vehicle',
+      userIdMap.get('clattner'),
+      'H2',
+      'Hummer',
+      "Hummer's don't mess around. This thing will smash through mountains, gas station exterior walls, tsunami waves, tornadoes, and wrapping paper. When Moses parted the Red Sea, this Hummer Blasted out of the sea walls and smashed onto the 10 Commandments with ease.",
+      ['beastly', 'roll tide'],
+      2002,
+      'notForSale',
+      undefined,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fh1.jpg_1521492171665?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=Oszg%2Fga6%2FFjDv6zVqoUiBS5SsQpYNu4nx%2BBaXL1NK7tJOOwBafKlghk2JXQuD81T0SMImVM8NdFag5fPBXqKazL2lqev8qWGZn7bPzic213rjytx7iYWSuscU5DJNPidoDqbXpaF2f7dFTyOz%2BNUhz0%2BBbTWBHiCXqC4p6AnHF5Qu%2FRCFOm2eCs0BhQv2IvS4k7Io7to%2B7o31dl%2FIHtjQKoZlcks7Jso4E2cwDuLbAXgXo7rs9gZKIXxZ3bCRSr8CX0zrDVTikbizyzNiYttRFxd4FMajN7k1FVE%2FQBlCfgIrACrMRCG2MqDOLvg6iwXQiTd3hfW%2BdGrNGOcbCFhUQ%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fh2.jpg_1521492180535?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=EaUS%2Be3%2Fhxvucr1JY8DDH6X0Ge40XOoQNIP5rEWPUdGcIC5n1z%2FsdvCwjHR18MpZy35jH8V8M8KftWK0LxT%2FGOhwYPPh0rxfZFbMGuNPkA7gN4uU7c3T%2Bc1RRSgzJaPxQyXEkDgMczJlmeRrKW6HqbH27rPx2zdUPtywUIA7TK0UhnhcGwQxYEwgj1bZAGSqv1%2FJnd2cH0gM%2Fu5GhomZys2w8t92NBKhLr169Q0EdX7WceMA0vH%2FBs5eoMOu%2BPNruhgybh7O%2BCbhDdcf2o%2B1TAJsi0LhFp9l55L3RnuMaz0w4IiVmuUzctseQx4GLPfYz1l44x32G5BPYqzfa8B4Ng%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fh3.jpg_1521492196572?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=H3NZyEHAWmgLlsGnEO2QfljdXK7vUuySyh5YWcpm%2Fmk2FQA0psTUnQaPSl7M%2B%2FTZURUceNeZTbM3G3GKwBv6n8EWkQcjdq6R262ZiLUeacWfNSJfnqDfmW8a1iEFfbTjmJAJQm2VJt7pdG7tdtMEI%2B1bUYlmyu1s6XgQT%2BR0pAKf7hnnpmCgNRqqskkdn8lIu%2BP6kerRhPMI%2Bl8qECqa5z8Ipl4lwAhlfvASDDFMKxAv3doaqReYnTUsGijmvUqFcpUEWWynSvRRMyj0dsAIFBORhAFvsah0DCzX8vloQNM4N46vxujEAer0coJc7fwg0vQsBRl0zdNSusoNhV%2FTew%3D%3D"
+      ],
+      0
+    ],
+    [
+      'who needs roll bars anyway',
+      userIdMap.get('clattner'),
+      'Wrangler',
+      'Jeep',
+      "Not quite as beastly as my H2, but great for climbing unnecessary objects getting really muddy I guess.",
+      ['flex', 'wheelin', 'roll bars'],
+      2004,
+      'notForSale',
+      undefined,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fjw1.jpg_1521492558595?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=d1HM6CX5cLv1Qs8se5Iy0hgTR4gb%2BRS2g%2B3FjKzwO1YmPtwHQutGXzaXQdeZGku8gWRL8qe43KLnzcnG6H0apmd3qD021OQtfCWp3RCF0pUUhZqj6bKCICNqBwS1yKEczu4JlpEVGrEGoHzvOt%2F7IbU5XycVjHWcuWHx50vaAzA69Z3SK8BFcdYpPti9RXxJT50%2FQMaJT3DxFgJ%2F35peoWfPsC9vyTLPbWbfItESd1W2SA0K2dQHqTqP1jbU7%2BcqfwhE%2FgYXpnErG4ZgVFOceCovPZzIWWpiXTr5URDEcXl%2FZyo%2Fz9qKwu0QSi3aFPtijs4A1cFx689czd97gpBi2A%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fjw2.jpg_1521492569172?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=eEeXjMIuQJS0NnatHM15yZllfzm145UryGIp3%2B4KZVOH1eBXEPW%2FaqzUaQxjD45iyLIZ%2FsQxIdNgXThiLY27spxANtxFFFix2LOSDrvw2c6YUPMbn5Elsx7D3y6pIh3smDFCJ8UuOcCPW%2BVX%2FRul9mWkF9iNV8aiqKZp8kgJ9xGrXdrFPEuBbMSzWGwXrWdx%2FOxmw5pmCb%2BcyU6wlOJflFhzqFdeXe6TkMLTqTD1%2Ft2j07Bzx2ttoiqqYIoTuxqD6ZDTn%2FEJJqLDJaJhJI6yR%2FeWDt5NZiiHkmuabqJImp6PdVV1GYsYxnDmmkDOZW%2BnSiGNV1RhRqYnZBiyarwIYA%3D%3D"
+      ],
+      0
+    ],
+    [
+      'lexus life',
+      userIdMap.get('hobert'),
+      'IS',
+      'Lexus',
+      "Great car to drive if you want to run into Paul at Costco.",
+      ['family', 'sedan', 'classy'],
+      2007,
+      'notForSale',
+      undefined,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fl1.jpg_1521492717871?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=Z0zvLkYdkqVeDvfi3BqRjM2p9QDuOFTLbe0h9peGlsRUbQyxW2hq3a97FD49JoPxVn5J%2BY1C4S9yy5sGp4l9uYDmFTYU9O8NLv4%2FnOKcXZeLDfeB1LjpOm3iH7%2FAci8kcbKpreWNvnyDkFRFRK6o%2BANZ9hPFQMfzeRTs2F8gz3ZD0eU2KPrC%2BYSM5XTAiZBcAQgMeBKwOTvfVIi5JNeC8Q6s6HHYeGxrce11ElCklaXBda5ColbQBrtlFae%2FLcTolczPnuHUCqhoifAtwWlrxlfHHCK%2FyM928S2yLE4ZEdBIDRbQsBfREJApx%2BlDHyUrmqosKpgZmOjNBq9y2bXf7g%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fl2.jpg_1521492740815?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=Vl4aksNDBbnk7Vli68%2BALKELgCCHUN8L%2BemeffKZ2hoeo%2FwVYaWlBLImDhADgSVkfWsYR6OOKCdB7Ja2RllNtgPrYijlDNYw0LWeZelTalZBRtKfuzfK3rIp19eR6JbjXdV2TmL1sZo27shK59HkhsNFl759YqQASG4xr9tUfh9qmk6BJbKYkU51KQ259qya5wklK3cLpZE%2BOhdQSRlSqGwhaRO%2BrwfKrFzXAn4HhrDoSAKF4qhkCLMdOiZkk3%2Buj98kd4Q0piRB1iQTuvPQ6hFoHKLd4L%2BDPUtiF72bDXStzdvthHqZuLAhaa7SMsRRyVaXppVqmDfaOveinNUJxA%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fl3.jpg_1521492753232?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=QFoJru1QUeO1subScN8PQ0BhelkFmqVGNa8W0x40JOsqh%2FXn%2FwCvE0pjSU55EyE%2BULFDHsO1UiiJlcoqhpVQBsegqsVF8IHpFyokyM%2BV%2F1yPPWKop7H4JmStY7b4kat907ED83pfYVgJsTej0JH9F9lu6lTY7K0sEDlrPTy2IJjt2jg6OzOpzRKlNh1W7WUG9d1SimOVzyhZQFA8DSjj%2F1i%2BVuc3DRWpl9s08LiepBKZReDyL0LgXMrS1nMzbUAMqNjSixQSRnMXSX6hkssYZUM1IuBTPPtqunhZBlaudA3cBWIj84JuQqP5zsK8Xl5jqYRFFWPTHIFAltOWMr8%2BuQ%3D%3D"
+      ],
+      0
+    ],
+    [
+      'more like rx-gr8',
+      userIdMap.get('geohotz'),
+      'RX-8',
+      'Mazda',
+      "I get more compliments on this car than any other car I've driven. People seem to love the RX-8. Great all around car and fun to drive.",
+      ['fun', 'comfy', 'cool looking', 'rx-great'],
+      2003,
+      'notForSale',
+      undefined,
+      [
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fmr2.jpg_1521492891814?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=keeUsrSsq%2BaqLZnO2gRhBWlYUbMo5p1a2LTIzymIgXkMcKOJG%2B5fDbLJOeOyuK2mhs41DkWQzUckgMYWd%2FTe2%2BTmvDVCKB2D1gro15mqXYT8Q3kQ4NVAq7sn90uMhxPKGS%2F3ForsCsZJU5w8FjqMEJoMiQ0u%2BP6v%2FV9GuQ51Wez7yrr78EQKB7tMtntN8qdkyRJbqw9W3vCuPUte5CKSI%2F0keGF7UYPKBLemB2%2FF%2FVCPo47QUoqj3rz5Pg2fHls%2FJ6HV14Z3%2BhoMkWqCzMrKmtUpf6%2BlJZZAY5Wfb3Pob07QwhpW2LuF0ZUIVDllEQ2WpVKUjEeU1fb1NHM6Algv2A%3D%3D",
+        "https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fmr1.jpg_1521492899104?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=aRKdBf3o96KzPGJJW6fYOXhmDSsBLu0K1v29uBJIhwiL6SG98OC05icifgCBH4mOevStdgqSodTA%2BIWX%2FOGLUGnik84lAqrPbkEZ7SDF%2BXAXgskUx8yJAtRegD9rm%2B6EkPJlda8wN%2FZW0W3UN9TXYfrZufZMnN0Z6mcWxMviA%2FW8juAO9kOC3jDUotvYRLQ4B85%2FUERUjv72ZM6RNxKHxn877CDbm33tHPLtcnGxumdlqy6qee3ielIpHyhMaDr4Ef0Cdc0RpjqdmFnCT9n696x%2Fdfsfsumzeqhs0lqFp%2FioneASZOozpBkcDAtnZU%2FVmdpj4rbgleUSjQ8Y3APJyw%3D%3D"
+      ],
+      0
     ]
   ].map(arr => ({
     nickname: arr[0],
