@@ -1,4 +1,4 @@
-import '../env';
+import 'dotenv/config';
 
 import * as mongoose from 'mongoose';
 import { prompt } from 'inquirer';
@@ -410,6 +410,54 @@ const getCarPosts = () =>
         'https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2F2.jpg_1521357796846?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=iOF6fOHwUSmhAOyJIV1wnM%2F0gBRJ3%2FVJmKsdRYFP%2BWq81pmSvdcUbvAAfAm2jehyEHlXQARf4AFV7qHi%2BwLTJBjJlOuLAoADERg4iLDWHQa7AbsvEpQsXeOmdyrcd3CAbHTbLzOMVCqzAqubLZMm6t6iCMK6ENXQU0lpo9eYPZzM7Aghth5Z1oAiIOTA5YOd4oUVpoId0q8j9I5ALEtuDJv3%2F7XKlUesQX60zGRYISMijjLu8J2jJliCVium6y1sAT3g%2BZ5MIdJ4zIRT6f%2BPGDfHu5vhHYN3bo6Orv2Xa1GPxp3dG9Ce7UTrdMiaQZy6YVXd0V%2BJLvRAdoq%2FSZykXQ%3D%3D'
       ],
       0,
+    ],
+    [
+      'geethirty',
+      userIdMap.get('geohotz'),
+      'G37',
+      'Infiniti',
+      'Love my geethrity, bootstrapped it with autopilot from comma ai. Shot with a Nikon D56000.',
+      ['infinit', 'quick', 'sleeper'],
+      2012,
+      'notForSale',
+      undefined,
+      [
+        'https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fg37_1.jpg_1521424683042?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=ZJ7tRseyinSyOzvx%2Fy2nL1dDmiTWVglu7cydlQGn%2Btb%2BwN7cLpIPsoBU7UDacsbf19N%2B0Kow13ZIzGFaWLaVvLH9TJGhQEIQJMJkPzZNuUNk8gfonz9CruAXpp%2BP4RRe7%2FStiBVQ3r13%2FuqvH7qG6qpoSjnHvMNsy7iOvxmA6s3NI08RSdZN1DvTcu%2Fw9EyOScntUe0QbfgsUfdU6Qe6oowvWz0QP2XNuQaSlDXoOm6jW1V0zRQA14fcURj00apRGYhnfeiKCDR1MmCMy0KYjsqZ2CB9o4DbGDeon1TPgqVFbRbSSC5WvxjileuIzkVfVAAOKqBoDauUrYlBQOGAMg%3D%3D',
+        'https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fg37_2.jpg_1521424702608?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=jlIutXaFKuZYQU%2BdAG4noxSAwinY%2FaveWHyx6JBIrW6kJiS0eGzW4tk0Im0L9LIy6vlmg7Bloh8v6tSQG6Ftu5Wm5XHWeg1voFaXuOw592qVqMkYzr%2BDRPsV5bVpWlPwj%2F1gru5MkEPiadbPt%2BwxxFh4oUgOqjqvCh3DrhfCXladjLCz0DZ3RqqpaTy8tih7Pmu6DuI1ywzq4ZCs3sgt2xtesQzekBfs3R5JaYIh0mO%2FAhfaj2FVw7ECertY3mG3kEe88CMihQzYpcupSwed70S0bwSTxTJYlG4gL%2F2bywZy4rMQ9WlVebu%2BIVmJN%2FxDC9IWoTv3AVfjJIbaUYa3KA%3D%3D',
+        'https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fg37_3.jpg_1521424765544?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=qRRzNvLBrT6SAJBc%2BE%2BPPrgR4wj84k5C9QwuVpag8mimejwBvWaCVTB4wSfdNHwnK2JRCALLpJLdP949nc%2BcUHN6h%2BXTmuNd0UGIt0oWC0CfQdZ21tYqR2z5egyvr2sE659EA2Qdtc%2F33dMJg%2Fb2SjOvUEQ6rSDvdB%2FydVmSsMQcNCl%2BxtcGWdf%2B6JCnN2k8bYOAaq0Koq7I2bPTaj0I6oBFofUPT0UCEhZ%2FamY8nAPDDk3m36tVFMyDwpytkbGbHbc3LK7n2JHEZrZZevg7wUjXWulk0aiSpDM6w5SAV8ZN%2BTtru9b5oF4A4%2F4TUn3DbfsyGyoYf1mb5vK4iS36gw%3D%3D',
+      ],
+      0,
+    ],
+    [
+      'm3rica',
+      userIdMap.get('dirtydan'),
+      'M3',
+      'BMW',
+      'Love riding around the city with this thing, but I\'ve been steady getting 2 speeding tickets each month. Guess I gotta cool it ):',
+      ['zoom', 'coupe', 'speed'],
+      2016,
+      'notForSale',
+      undefined,
+      [
+        'https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fm3_1.jpg_1521424919308?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=aR%2Blj6cLoCwGnKfc1TO1Asec5TNa5fl8OQyEqsD%2F8c9RFAayN59zoyOiDSsV%2FvzXmwzb6SZb3Wy8NM8woSXHXaDe8wfsICnU3yhH%2Fs9VJUf4jdQNQmsz64hbTiXPNxHQTTdqN%2FhqL3Gvofi5IERS5goXJ%2FtaHB2Z%2FbrdJlAsVb2%2FF1avwsyXqRDS%2FX%2F4%2Blzun7SqhH9VNqj5p77Y%2F18WmO34J2srnNJxuoGAkq4CnCTZwpPL9TH2W12xsrtpd5MNBWrTazYLy%2BsRe3%2FrBNit%2BylTaWFPAUgfZXpGS07e5puQH6M5h3pbSJoqpCsc5rodfsRLpxT8N1D9YFwgoNPXDQ%3D%3D',
+        'https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fm3_2.jpg_1521425110045?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=j0JT8rzLbLRON5OKKj7eHJ86ramfbe3g3itEzAahNluCx%2BNm3x%2FV9fy965jZ1VL1cJjXjPt1XZm2XV9%2FGMNoqIsu2veTRy%2F3iO6gF372lYRQPQsERQWIW17enazq4LY%2BGb4NhZX7ZLKORl0%2F%2BARwZyvZXDVPF8xIKWWWNix2N%2FlUG1DAp%2BQjdQqNzh%2FXHJgnOYHkRZC96twP2bdOUIYLqCN72Iljwq2YZcKSRdW%2BtshHA6rQ3woleEnBBEZ1tC9Hqr91hZ99CX2I00Wtba3vCZLziKfipyuZrOrNOU8Ag0YWAEFd7ojTR%2F909SQAh6L6%2BLPtYZ3YhcvcvgS0ActHzw%3D%3D'
+      ],
+      0
+    ],
+    [
+      'priu$',
+      userIdMap.get('bjarnepp'),
+      'Prius',
+      'Toyota',
+      'Bought this car to write an autonomous API in C++ for. It\'s pretty nice actually.',
+      ['eco', 'efficient', 'green', 'vegan', 'c++'],
+      2017,
+      'notForSale',
+      undefined,
+      [
+        'https://storage.googleapis.com/torq-f0c17.appspot.com/post-pictures%2Fprime.jpg_1521425492772?GoogleAccessId=firebase-adminsdk-0xtd9@torq-f0c17.iam.gserviceaccount.com&Expires=16447017600&Signature=BXl7avNaYZXTk86kdSJu8YlZYAaOnBKcMCfrFlP6BFPbIdQ4nxyy681TSsCsxmoLOZ2wqgh%2FNjfVQ8fwgJf44wI1v1L45PliL%2FGCW9Ei4Fky7lCmUrHO5MmwjHQrbz3WspS1bMBfB6mvtKUfHUZSbGDIxU4BHrRvwai6YwLSfts%2Fdt6HZw4QvmdK67HETYCkWj9UHNn1mZhiEaMReuWqSjR2B1SDke0wcKUlfzUOo2H9TMdFUatYnBtu%2BpPG0pn3zfSeQ07%2BNSkh1ZnmtyqFPY5Bv2HoStUcfoYjCI5yhiHmlu7OovwbwqhEoze3rzRBlHqkRdHI6n0gCCFnA8AIQQ%3D%3D',
+      ],
+      0
     ]
   ].map(arr => ({
     nickname: arr[0],
