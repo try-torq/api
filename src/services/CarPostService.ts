@@ -20,8 +20,13 @@ export interface INewCarPostBuffer {
 }
 
 export class CarPostService {
-  public static async findAll(): Promise<CarPost[]> {
-    const documents = await CarPostModel.find();
+  public static async findAll(offset: number = 0, limit: number = 100): Promise<CarPost[]> {
+    const documents = await CarPostModel
+      .find()
+      .sort({ publishedAt: -1 })
+      .skip(offset)
+      .limit(limit)
+      .exec();
     return documents.map(document => new CarPost(document))
   }
 

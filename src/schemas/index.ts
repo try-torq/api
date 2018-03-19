@@ -6,6 +6,7 @@ import {
   FindUserByEmailQuery,
   FindAllCarMakesQuery,
   FindAllUsersQuery,
+  FindAllCarPostsQuery,
 } from './queries';
 import {
   CreateUserMutation,
@@ -25,6 +26,7 @@ export class Schema {
       findUserByEmail: new FindUserByEmailQuery(),
       findUserByUsername: new FindUserByUsernameQuery(),
       findUserById: new FindUserByIdQuery(),
+      findAllCarPosts: new FindAllCarPostsQuery(),
     }
   })
 
