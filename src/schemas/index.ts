@@ -15,6 +15,9 @@ import {
   AddCarModelMutation,
   LoginMutation,
   LoginWithEmailMutation,
+  FavoritePostMutation,
+  AddCommentMutation,
+  UnfavoritePostMutation,
 } from './mutations';
 
 export class Schema {
@@ -38,7 +41,10 @@ export class Schema {
       createUser: new CreateUserMutation(),
       createCarPost: new CreateCarPostMutation(),
       login: new LoginMutation(),
-      loginWithEmail: new LoginWithEmailMutation()
+      loginWithEmail: new LoginWithEmailMutation(),
+      favoritePost: new FavoritePostMutation(),
+      unfavoritePost: new UnfavoritePostMutation(),
+      addComment: new AddCommentMutation(),
     }
   })
 

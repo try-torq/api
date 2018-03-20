@@ -4,3 +4,6 @@ export * from './AddCarModelMutation';
 export * from './CreateCarPostMutation';
 export * from './LoginMutation';
 export * from './LoginWithEmailMutation';
+export * from './AddCommentMutation';
+export * from './FavoritePostMutation';
+export * from './UnfavoritePostMutation';

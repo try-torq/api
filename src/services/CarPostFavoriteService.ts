@@ -38,4 +38,9 @@ export class CarPostFavoriteService {
     const documents = await CarPostFavoriteModel.find({ user: id });
     return documents.map(document => new CarPostFavorite(document));
   }
+
+  public static async findAndDelete(user: string, post: string): Promise<CarPostFavorite> {
+    const document = await CarPostFavoriteModel.deleteOne({ user, post });
+    return new CarPostFavorite(document);
+  }
 }
