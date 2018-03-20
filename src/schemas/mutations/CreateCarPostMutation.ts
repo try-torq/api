@@ -19,6 +19,7 @@ export class CreateCarPostMutation extends AbstractMutation implements IGraphQLM
     carMakeName: { type: new GraphQLNonNull(GraphQLString) },
     tags: { type: new GraphQLList(GraphQLString) },
     year: { type: new GraphQLNonNull(GraphQLInt) },
+    body: { type: new GraphQLNonNull(GraphQLString) },
     saleStatus: { type: new GraphQLNonNull(SaleStatusType) },
     pictureUrls: { type: new GraphQLList(GraphQLString) },
     primaryPictureIndex: { type: GraphQLInt },
