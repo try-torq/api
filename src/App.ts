@@ -4,10 +4,11 @@ import * as helmet from 'helmet';
 import * as morgan from 'morgan';
 import * as cors from 'cors';
 
-import { authMiddleware } from './middleware';
-import { Exception } from './exceptions';
-import { UserService } from './services';
-import { GraphQLRoutes, RootRoutes } from './routes'
+import {
+  authMiddleware,
+  accessControlMiddleware,
+  notFoundMiddleware
+} from './middleware';
 import {
   Database,
   Environment,
@@ -15,6 +16,7 @@ import {
   Logger,
   responseStream,
 } from './core';
+import { GraphQLRoutes, RootRoutes } from './routes';
 
 export class App {
   public static shared = new App();
@@ -31,10 +33,11 @@ export class App {
   public main(): void {
     this.express
       .use(helmet())
-      .use(cors())
+      .use(cors({ origin: '*', credentials: true }))
       .use(authMiddleware)
       .use(morgan('combined', { stream: responseStream }))
       .use(helmet.noCache())
+      .use(accessControlMiddleware)
       .use(helmet.hsts({
         maxAge: 31536000,
         includeSubdomains: true,
